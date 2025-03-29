@@ -4,11 +4,14 @@ import {
   StyleSheet,
   TouchableOpacity,
   Text,
-  Platform,
 } from 'react-native';
 import MapView, { Marker, Region } from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import axios from 'axios';
+import { useNavigation } from '@react-navigation/native';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../navigation/RootNavigator';
 
 const GOOGLE_API_KEY = 'AIzaSyAhX_qab75bK7JSEhHxnTHh9E32jpoO9YI';
 
@@ -17,33 +20,12 @@ const HomeScreen = () => {
   const [places, setPlaces] = useState<any[]>([]);
   const mapRef = useRef<MapView | null>(null);
 
-  const getNearbyPlaces = async (latitude: number, longitude: number) => {
-    const radius = 3000;
-    const type = 'car_repair';
-
-    const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=${radius}&type=${type}&key=${GOOGLE_API_KEY}`;
-
-    try {
-      const response = await axios.get(url);
-      console.log('📦 Google API Cevabı:', JSON.stringify(response.data, null, 2));
-
-      if (response.data.status !== 'OK') {
-        console.warn('⚠️ Google API Hatası:', response.data.status);
-      }
-
-      return response.data.results;
-    } catch (error) {
-      console.error('❌ Yerler alınamadı:', error);
-      return [];
-    }
-  };
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const getCurrentLocation = () => {
     Geolocation.getCurrentPosition(
-      async position => {
+      position => {
         const { latitude, longitude } = position.coords;
-        console.log('📍 Konum:', latitude, longitude);
-
         const newRegion = {
           latitude,
           longitude,
@@ -52,16 +34,27 @@ const HomeScreen = () => {
         };
         setRegion(newRegion);
         mapRef.current?.animateToRegion(newRegion, 1000);
-
-        const nearby = await getNearbyPlaces(latitude, longitude);
-        setPlaces(nearby);
-        console.log('🧰 Bulunan tamirciler:', nearby.length);
       },
       error => {
         console.log('🚫 Konum alınamadı:', error);
       },
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
     );
+  };
+
+  const searchNearby = async (query: string) => {
+    if (!region) return;
+    const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${encodeURIComponent(
+      query
+    )}&location=${region.latitude},${region.longitude}&radius=5000&key=${GOOGLE_API_KEY}`;
+
+    try {
+      const response = await axios.get(url);
+      const results = response.data.results || [];
+      setPlaces(results);
+    } catch (error) {
+      console.error(`❌ Arama hatası (${query}):`, error);
+    }
   };
 
   useEffect(() => {
@@ -76,33 +69,56 @@ const HomeScreen = () => {
           style={styles.map}
           region={region}
           showsUserLocation={true}
-          showsMyLocationButton={false}
         >
           <Marker
             coordinate={region}
             title="Senin Konumun"
-            description="Buradasın"
             pinColor="blue"
           />
 
-          {places.map((place, index) => (
-            <Marker
-              key={index}
-              coordinate={{
-                latitude: place.geometry.location.lat,
-                longitude: place.geometry.location.lng,
-              }}
-              title={place.name}
-              description={place.vicinity}
-              pinColor="red"
-            />
-          ))}
+          {places.map((place, index) => {
+            const lat = place.geometry?.location?.lat;
+            const lng = place.geometry?.location?.lng;
+            if (!lat || !lng) return null;
+
+            const name = place.name?.toLowerCase() || '';
+            const isRepair = name.includes('tamir') || name.includes('servis');
+
+            const icon = isRepair
+              ? require('../assets/icons/wrench.png')
+              : require('../assets/icons/shop.png');
+
+            return (
+              <Marker
+                key={index}
+                coordinate={{ latitude: lat, longitude: lng }}
+                image={icon}
+                onPress={() => navigation.navigate('Detail', { place })}
+              />
+            );
+          })}
         </MapView>
       )}
 
-      <TouchableOpacity style={styles.locateButton} onPress={getCurrentLocation}>
-        <Text style={styles.buttonText}>📍</Text>
+      <TouchableOpacity style={styles.googleLocateButton} onPress={getCurrentLocation}>
+        <Ionicons name="location-sharp" size={20} color="#007aff" />
       </TouchableOpacity>
+
+      <View style={styles.buttonGroup}>
+        <TouchableOpacity
+          style={[styles.searchButton, { backgroundColor: '#0a84ff' }]}
+          onPress={() => searchNearby('motosiklet tamircisi')}
+        >
+          <Text style={styles.searchText}>Tamircileri Göster</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.searchButton, { backgroundColor: '#34c759' }]}
+          onPress={() => searchNearby('motosiklet yedek parça')}
+        >
+          <Text style={styles.searchText}>Parçacıları Göster</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -110,24 +126,39 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   map: { flex: 1 },
-  locateButton: {
+  googleLocateButton: {
     position: 'absolute',
-    bottom: 30,
+    bottom: 40,
     right: 20,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     backgroundColor: '#fff',
-    borderRadius: 25,
-    width: 50,
-    height: 50,
     justifyContent: 'center',
     alignItems: 'center',
-    elevation: 5,
+    elevation: 4,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
     shadowRadius: 2,
+    borderColor: '#ccc',
+    borderWidth: 1,
   },
-  buttonText: {
-    fontSize: 24,
+  buttonGroup: {
+    position: 'absolute',
+    bottom: 60,
+    alignSelf: 'center',
+    gap: 12,
+  },
+  searchButton: {
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  searchText: {
+    color: '#fff',
+    fontWeight: '600',
   },
 });
 

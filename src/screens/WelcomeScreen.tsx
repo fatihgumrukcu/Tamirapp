@@ -9,6 +9,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/RootNavigator';
+import FadeSlideTransition from '../components/FadeSlideTransition'; // ✅ animasyon bileşeni
 
 const WelcomeScreen = () => {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
@@ -20,17 +21,21 @@ const WelcomeScreen = () => {
       resizeMode="cover"
     >
       <View style={styles.overlay}>
-        <View style={styles.topContainer}>
-          <Text style={styles.title}>Hoş Geldiniz</Text>
-          <Text style={styles.subtitle}>TamirApp’le Tamir Et</Text>
-        </View>
+        <FadeSlideTransition>
+          <View style={styles.topContainer}>
+            <Text style={styles.title}>Hoş Geldiniz</Text>
+            <Text style={styles.subtitle}>TamirApp’le Tamir Et</Text>
+          </View>
+        </FadeSlideTransition>
 
-        <View style={styles.bottomContainer}>
-          <TouchableOpacity style={styles.button} onPress={() => navigation.replace('Onboarding')}>
-            <Text style={styles.buttonText}>BAŞLA</Text>
-          </TouchableOpacity>
-          {/* <Text style={styles.version}>v1.0.0</Text> */}
-        </View>
+        <FadeSlideTransition>
+          <View style={styles.bottomContainer}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.replace('Onboarding')}>
+              <Text style={styles.buttonText}>BAŞLA</Text>
+            </TouchableOpacity>
+            {/* <Text style={styles.version}>v1.0.0</Text> */}
+          </View>
+        </FadeSlideTransition>
       </View>
     </ImageBackground>
   );
@@ -80,11 +85,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'Montserrat-SemiBold',
   },
-  // version: {
-  //   fontSize: 12,
-  //   color: '#ddd',
-  //   fontFamily: 'Montserrat-Light',
-  // },
 });
 
 export default WelcomeScreen;

@@ -74,11 +74,7 @@ const HomeScreen = () => {
           showsUserLocation={true}
           mapType={mapType}
         >
-          <Marker
-            coordinate={region}
-            title="Senin Konumun"
-            pinColor="blue"
-          />
+          <Marker coordinate={region} title="Senin Konumun" pinColor="blue" />
 
           {places.map((place, index) => {
             const lat = place.geometry?.location?.lat;
@@ -104,7 +100,7 @@ const HomeScreen = () => {
         </MapView>
       )}
 
-      {/* 🔘 Harita Türü Seçici - Dikey Sağ Kenar */}
+      {/* 🔘 Harita Türü Seçici */}
       <View style={styles.mapTypeColumn}>
         <TouchableOpacity onPress={() => setMapType('standard')} style={styles.mapTypeButton}>
           <Text style={styles.mapTypeText}>Standart</Text>
@@ -121,19 +117,22 @@ const HomeScreen = () => {
         <Ionicons name="location-sharp" size={20} color="#007aff" />
       </TouchableOpacity>
 
+      {/* 🔍 Arama Aksiyon Butonları */}
       <View style={styles.buttonGroup}>
         <TouchableOpacity
-          style={[styles.searchButton, { backgroundColor: '#0a84ff' }]}
+          style={styles.actionButton}
           onPress={() => searchNearby('motosiklet tamircisi')}
         >
-          <Text style={styles.searchText}>Tamircileri Göster</Text>
+          <Ionicons name="construct-outline" size={18} color="#fff" style={styles.icon} />
+          <Text style={styles.buttonLabel}>Tamircileri Göster</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.searchButton, { backgroundColor: '#34c759' }]}
+          style={[styles.actionButton, { backgroundColor: '#ffa600' }]}
           onPress={() => searchNearby('motosiklet yedek parça')}
         >
-          <Text style={styles.searchText}>Parçacıları Göster</Text>
+          <Ionicons name="cog-outline" size={18} color="#fff" style={styles.icon} />
+          <Text style={styles.buttonLabel}>Parçacıları Göster</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -143,6 +142,7 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   map: { flex: 1 },
+
   googleLocateButton: {
     position: 'absolute',
     bottom: 40,
@@ -162,6 +162,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     zIndex: 5,
   },
+
   buttonGroup: {
     position: 'absolute',
     bottom: 60,
@@ -169,16 +170,33 @@ const styles = StyleSheet.create({
     gap: 12,
     zIndex: 4,
   },
-  searchButton: {
+
+  actionButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#ff8200',
     paddingVertical: 12,
     paddingHorizontal: 20,
-    borderRadius: 8,
-    alignItems: 'center',
+    borderRadius: 50,
+    marginVertical: 6,
+    minWidth: 240,
+    alignSelf: 'center',
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowOffset: { width: 0, height: 1 },
   },
-  searchText: {
+  icon: {
+    marginRight: 8,
+  },
+  buttonLabel: {
     color: '#fff',
     fontWeight: '600',
+    fontSize: 15,
+    fontFamily: 'Montserrat-SemiBold',
   },
+
   mapTypeColumn: {
     position: 'absolute',
     top: 100,
@@ -198,14 +216,16 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     paddingHorizontal: 10,
     marginVertical: 4,
-    backgroundColor: '#f2f2f2',
+    backgroundColor: '#fff7f0',
     borderRadius: 6,
     alignItems: 'center',
+    borderColor: '#ff8200',
+    borderWidth: 1,
   },
   mapTypeText: {
     fontSize: 13,
-    color: '#333',
-    fontWeight: '500',
+    color: '#ff8200',
+    fontFamily: 'Montserrat-Medium',
   },
 });
 

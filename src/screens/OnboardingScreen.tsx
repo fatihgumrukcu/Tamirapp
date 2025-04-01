@@ -10,26 +10,26 @@ import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/RootNavigator';
 
-const WelcomeScreen = () => {
+const OnboardingScreen = () => {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   return (
     <ImageBackground
-      source={require('../assets/images/welcome-bg.png')}
+      source={require('../assets/images/Onboarding.png')}
       style={styles.background}
       resizeMode="cover"
     >
       <View style={styles.overlay}>
-        <View style={styles.topContainer}>
-          <Text style={styles.title}>Hoş Geldiniz</Text>
-          <Text style={styles.subtitle}>TamirApp’le Tamir Et</Text>
-        </View>
+        <View style={styles.content}>
+          <Text style={styles.title}>Neye İhtiyacın Var?</Text>
+          <Text style={styles.subtitle}>TamirApp ile en yakın tamircileri harita üzerinden gör, iletişime geç veya doğrudan yol tarifi al.</Text>
 
-        <View style={styles.bottomContainer}>
-          <TouchableOpacity style={styles.button} onPress={() => navigation.replace('Onboarding')}>
-            <Text style={styles.buttonText}>BAŞLA</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.replace('FinalOnboarding')}
+          >
+            <Text style={styles.buttonText}>Devam Et</Text>
           </TouchableOpacity>
-          {/* <Text style={styles.version}>v1.0.0</Text> */}
         </View>
       </View>
     </ImageBackground>
@@ -39,52 +39,44 @@ const WelcomeScreen = () => {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    justifyContent: 'center',
   },
   overlay: {
     flex: 1,
-    backgroundColor: 'rgba(255,130,0,0.2)',
-    justifyContent: 'space-between',
+    backgroundColor: 'rgba(255,130,0,0.3)',
+    justifyContent: 'flex-end',
+  },
+  content: {
     paddingHorizontal: 32,
-    paddingVertical: 60,
-  },
-  topContainer: {
-    alignItems: 'center',
-    marginTop: 40,
-  },
-  bottomContainer: {
+    paddingBottom: 60,
     alignItems: 'center',
   },
   title: {
-    fontSize: 42,
-    fontWeight: '700',
+    fontSize: 32,
     color: '#fff',
+    fontWeight: 'bold',
     marginBottom: 12,
     fontFamily: 'Montserrat-Bold',
+    textAlign: 'center',
   },
   subtitle: {
-    fontSize: 20,
+    fontSize: 18,
     color: '#fff',
+    marginBottom: 32,
     fontFamily: 'Montserrat-Regular',
+    textAlign: 'center',
   },
   button: {
     backgroundColor: '#ff8200',
-    paddingVertical: 18,
-    paddingHorizontal: 50,
+    paddingVertical: 16,
+    paddingHorizontal: 48,
     borderRadius: 50,
-    marginBottom: 12,
+    alignItems: 'center',
   },
   buttonText: {
     color: '#fff',
     fontSize: 18,
-    fontWeight: 'bold',
     fontFamily: 'Montserrat-SemiBold',
   },
-  // version: {
-  //   fontSize: 12,
-  //   color: '#ddd',
-  //   fontFamily: 'Montserrat-Light',
-  // },
 });
 
-export default WelcomeScreen;
+export default OnboardingScreen;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import {
   View,
   Text,
@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useFocusEffect } from '@react-navigation/native'; // ✅
 
 const FAVORITES_KEY = 'FAVORITE_PLACES';
 
@@ -19,6 +20,8 @@ const FavoritesScreen = () => {
       const stored = await AsyncStorage.getItem(FAVORITES_KEY);
       if (stored) {
         setFavorites(JSON.parse(stored));
+      } else {
+        setFavorites([]); // ⛔ Eğer boşsa liste sıfırlansın
       }
     } catch (error) {
       console.error('Favoriler yüklenemedi:', error);
@@ -34,9 +37,12 @@ const FavoritesScreen = () => {
     }
   };
 
-  useEffect(() => {
-    loadFavorites();
-  }, []);
+  // ✅ Her ekrana odaklanıldığında favorileri yeniden yükle
+  useFocusEffect(
+    useCallback(() => {
+      loadFavorites();
+    }, [])
+  );
 
   const renderItem = ({ item }: { item: any }) => (
     <View style={styles.card}>

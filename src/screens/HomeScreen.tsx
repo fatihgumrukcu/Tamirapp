@@ -5,19 +5,21 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
-import MapView, { Marker, Region } from 'react-native-maps';
+import MapView, { Marker, Region, MapType } from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/RootNavigator';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const GOOGLE_API_KEY = 'AIzaSyAhX_qab75bK7JSEhHxnTHh9E32jpoO9YI';
 
 const HomeScreen = () => {
   const [region, setRegion] = useState<Region | null>(null);
   const [places, setPlaces] = useState<any[]>([]);
+  const [mapType, setMapType] = useState<MapType>('standard');
   const mapRef = useRef<MapView | null>(null);
 
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
@@ -42,10 +44,11 @@ const HomeScreen = () => {
     );
   };
 
-  const searchNearby = async (query: string) => {
+  const searchNearby = async (keyword: string) => {
     if (!region) return;
+
     const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${encodeURIComponent(
-      query
+      keyword
     )}&location=${region.latitude},${region.longitude}&radius=5000&key=${GOOGLE_API_KEY}`;
 
     try {
@@ -53,7 +56,7 @@ const HomeScreen = () => {
       const results = response.data.results || [];
       setPlaces(results);
     } catch (error) {
-      console.error(`❌ Arama hatası (${query}):`, error);
+      console.error(`❌ Arama hatası (${keyword}):`, error);
     }
   };
 
@@ -62,13 +65,14 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['left', 'right']}>
       {region && (
         <MapView
           ref={mapRef}
           style={styles.map}
           region={region}
           showsUserLocation={true}
+          mapType={mapType}
         >
           <Marker
             coordinate={region}
@@ -100,6 +104,19 @@ const HomeScreen = () => {
         </MapView>
       )}
 
+      {/* 🔘 Harita Türü Seçici - Dikey Sağ Kenar */}
+      <View style={styles.mapTypeColumn}>
+        <TouchableOpacity onPress={() => setMapType('standard')} style={styles.mapTypeButton}>
+          <Text style={styles.mapTypeText}>Standart</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => setMapType('satellite')} style={styles.mapTypeButton}>
+          <Text style={styles.mapTypeText}>Uydu</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => setMapType('hybrid')} style={styles.mapTypeButton}>
+          <Text style={styles.mapTypeText}>Hibrit</Text>
+        </TouchableOpacity>
+      </View>
+
       <TouchableOpacity style={styles.googleLocateButton} onPress={getCurrentLocation}>
         <Ionicons name="location-sharp" size={20} color="#007aff" />
       </TouchableOpacity>
@@ -119,7 +136,7 @@ const HomeScreen = () => {
           <Text style={styles.searchText}>Parçacıları Göster</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -143,12 +160,14 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     borderColor: '#ccc',
     borderWidth: 1,
+    zIndex: 5,
   },
   buttonGroup: {
     position: 'absolute',
     bottom: 60,
     alignSelf: 'center',
     gap: 12,
+    zIndex: 4,
   },
   searchButton: {
     paddingVertical: 12,
@@ -159,6 +178,34 @@ const styles = StyleSheet.create({
   searchText: {
     color: '#fff',
     fontWeight: '600',
+  },
+  mapTypeColumn: {
+    position: 'absolute',
+    top: 100,
+    right: 10,
+    backgroundColor: '#ffffff',
+    borderRadius: 10,
+    paddingVertical: 6,
+    paddingHorizontal: 8,
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 4,
+    zIndex: 10,
+  },
+  mapTypeButton: {
+    paddingVertical: 6,
+    paddingHorizontal: 10,
+    marginVertical: 4,
+    backgroundColor: '#f2f2f2',
+    borderRadius: 6,
+    alignItems: 'center',
+  },
+  mapTypeText: {
+    fontSize: 13,
+    color: '#333',
+    fontWeight: '500',
   },
 });
 

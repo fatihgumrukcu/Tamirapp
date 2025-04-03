@@ -22,39 +22,27 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const RootNavigator = () => {
   return (
     <NavigationContainer>
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen
-        name="Welcome"
-        component={WelcomeScreen}
-        options={{ animation: 'fade_from_bottom' }} // 1️⃣
-      />
-      <Stack.Screen
-        name="Onboarding"
-        component={OnboardingScreen}
-        options={{ animation: 'slide_from_right' }} // 2️⃣
-      />
-      <Stack.Screen
-        name="FinalOnboarding"
-        component={FinalOnboardingScreen}
-        options={{ animation: 'slide_from_bottom' }} // 3️⃣
-      />
-      <Stack.Screen
-        name="Tabs"
-        component={TabNavigator}
-        options={{ animation: 'simple_push' }} // Ana uygulamaya geçiş daha doğal
-      />
-      <Stack.Screen
-        name="Detail"
-        component={RepairDetailScreen}
-        options={{
-          headerShown: true,
-          title: 'Tamirci Detay',
-          animation: 'slide_from_right',
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+          animation: 'slide_from_right', // 🔥 Tüm ekranlar için sağdan sola geçiş
         }}
-      />
-    </Stack.Navigator>
-  </NavigationContainer>
-  );  
+      >
+        <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        <Stack.Screen name="Onboarding" component={OnboardingScreen} />
+        <Stack.Screen name="FinalOnboarding" component={FinalOnboardingScreen} />
+        <Stack.Screen name="Tabs" component={TabNavigator} />
+        <Stack.Screen
+          name="Detail"
+          component={RepairDetailScreen}
+          options={{
+            headerShown: true,
+            title: 'Tamirci Detay',
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 };
 
 export default RootNavigator;

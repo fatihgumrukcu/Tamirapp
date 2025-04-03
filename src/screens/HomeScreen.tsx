@@ -20,6 +20,7 @@ const HomeScreen = () => {
   const [region, setRegion] = useState<Region | null>(null);
   const [places, setPlaces] = useState<any[]>([]);
   const [mapType, setMapType] = useState<MapType>('standard');
+  const [mapTypeMenuVisible, setMapTypeMenuVisible] = useState(false);
   const mapRef = useRef<MapView | null>(null);
 
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
@@ -68,56 +69,67 @@ const HomeScreen = () => {
     <SafeAreaView style={styles.container} edges={['left', 'right']}>
       {region && (
         <MapView
-          ref={mapRef}
-          style={styles.map}
-          region={region}
-          showsUserLocation={true}
-          mapType={mapType}
-        >
-          <Marker coordinate={region} title="Senin Konumun" pinColor="blue" />
-
-          {places.map((place, index) => {
-            const lat = place.geometry?.location?.lat;
-            const lng = place.geometry?.location?.lng;
-            if (!lat || !lng) return null;
-
-            const name = place.name?.toLowerCase() || '';
-            const isRepair = name.includes('tamir') || name.includes('servis');
-
-            const icon = isRepair
-              ? require('../assets/icons/wrench.png')
-              : require('../assets/icons/shop.png');
-
-            return (
-              <Marker
-                key={index}
-                coordinate={{ latitude: lat, longitude: lng }}
-                image={icon}
-                onPress={() => navigation.navigate('Detail', { place })}
-              />
-            );
-          })}
-        </MapView>
+        ref={mapRef}
+        style={styles.map}
+        region={region}
+        showsUserLocation={false} // 🔁 Kapatıldı çünkü kendi marker'ımızı ekliyoruz
+        mapType={mapType}
+      >
+        {region && (
+          <Marker
+            coordinate={region}
+            anchor={{ x: 0.5, y: 0.5 }}
+            image={require('../assets/icons/cursor.png')} // 👈 senin PNG dosyan
+          />
+        )}
+      
+        {places.map((place, index) => {
+          const lat = place.geometry?.location?.lat;
+          const lng = place.geometry?.location?.lng;
+          if (!lat || !lng) return null;
+      
+          const name = place.name?.toLowerCase() || '';
+          const isRepair = name.includes('tamir') || name.includes('servis');
+      
+          const icon = isRepair
+            ? require('../assets/icons/wrench.png')
+            : require('../assets/icons/shop.png');
+      
+          return (
+            <Marker
+              key={index}
+              coordinate={{ latitude: lat, longitude: lng }}
+              image={icon}
+              onPress={() => navigation.navigate('Detail', { place })}
+            />
+          );
+        })}
+      </MapView>
       )}
 
-      {/* 🔘 Harita Türü Seçici */}
-      <View style={styles.mapTypeColumn}>
-        <TouchableOpacity onPress={() => setMapType('standard')} style={styles.mapTypeButton}>
-          <Text style={styles.mapTypeText}>Standart</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => setMapType('satellite')} style={styles.mapTypeButton}>
-          <Text style={styles.mapTypeText}>Uydu</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => setMapType('hybrid')} style={styles.mapTypeButton}>
-          <Text style={styles.mapTypeText}>Hibrit</Text>
-        </TouchableOpacity>
-      </View>
+      {/* Harita Türü Seçici Toggle */}
+      <TouchableOpacity style={styles.mapTypeToggle} onPress={() => setMapTypeMenuVisible(prev => !prev)}>
+        <Ionicons name="layers-outline" size={22} color="#fff" />
+      </TouchableOpacity>
+
+      {mapTypeMenuVisible && (
+        <View style={styles.mapTypeDropdown}>
+          <TouchableOpacity onPress={() => { setMapType('standard'); setMapTypeMenuVisible(false); }} style={styles.mapTypeButton}>
+            <Text style={styles.mapTypeText}>Standart</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => { setMapType('satellite'); setMapTypeMenuVisible(false); }} style={styles.mapTypeButton}>
+            <Text style={styles.mapTypeText}>Uydu</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => { setMapType('hybrid'); setMapTypeMenuVisible(false); }} style={styles.mapTypeButton}>
+            <Text style={styles.mapTypeText}>Hibrit</Text>
+          </TouchableOpacity>
+        </View>
+      )}
 
       <TouchableOpacity style={styles.googleLocateButton} onPress={getCurrentLocation}>
         <Ionicons name="location-sharp" size={20} color="#007aff" />
       </TouchableOpacity>
 
-      {/* 🔍 Arama Aksiyon Butonları */}
       <View style={styles.buttonGroup}>
         <TouchableOpacity
           style={styles.actionButton}
@@ -197,35 +209,39 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat-SemiBold',
   },
 
-  mapTypeColumn: {
+  mapTypeToggle: {
     position: 'absolute',
     top: 100,
-    right: 10,
-    backgroundColor: '#ffffff',
+    right: 20,
+    backgroundColor: '#ff8200',
+    padding: 12,
+    borderRadius: 25,
+    zIndex: 6,
+  },
+
+  mapTypeDropdown: {
+    position: 'absolute',
+    top: 160,
+    right: 20,
+    backgroundColor: '#fff',
     borderRadius: 10,
-    paddingVertical: 6,
-    paddingHorizontal: 8,
+    padding: 8,
     elevation: 5,
     shadowColor: '#000',
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.15,
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 4,
-    zIndex: 10,
+    zIndex: 5,
   },
   mapTypeButton: {
-    paddingVertical: 6,
-    paddingHorizontal: 10,
-    marginVertical: 4,
-    backgroundColor: '#fff7f0',
+    paddingVertical: 8,
+    paddingHorizontal: 14,
     borderRadius: 6,
-    alignItems: 'center',
-    borderColor: '#ff8200',
-    borderWidth: 1,
   },
   mapTypeText: {
-    fontSize: 13,
-    color: '#ff8200',
+    fontSize: 14,
     fontFamily: 'Montserrat-Medium',
+    color: '#333',
   },
 });
 

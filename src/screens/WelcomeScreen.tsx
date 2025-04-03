@@ -47,12 +47,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   overlay: {
-    flex: 1,
-    backgroundColor: 'rgba(255,130,0,0.2)',
-    justifyContent: 'space-between',
-    paddingHorizontal: 32,
-    paddingVertical: 60,
-  },
+  flex: 1,
+  backgroundColor: 'rgba(0,0,0,0.5)', // daha koyu ve net overlay
+  justifyContent: 'space-between',
+  paddingHorizontal: 32,
+  paddingVertical: 60,
+},
+
+
   topContainer: {
     alignItems: 'center',
     marginTop: 40,

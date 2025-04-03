@@ -9,6 +9,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/RootNavigator';
+import FadeSlideTransition from '../components/FadeSlideTransition';
 
 const OnboardingScreen = () => {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
@@ -20,21 +21,39 @@ const OnboardingScreen = () => {
       resizeMode="cover"
     >
       <View style={styles.overlay}>
-        <View style={styles.content}>
-          <Text style={styles.title}>Neye İhtiyacın Var?</Text>
-          <Text style={styles.subtitle}>TamirApp ile en yakın tamircileri harita üzerinden gör, iletişime geç veya doğrudan yol tarifi al.</Text>
+        <FadeSlideTransition>
+          <View style={styles.topSection}>
+            <Text style={styles.title}>Tamirci mi Arıyorsun?</Text>
+            <Text style={styles.subtitle}>
+              Artık en yakın motosiklet tamircisini bulmak için sokak sokak gezmene gerek yok. TamirApp,
+              konumuna en yakın servisleri harita üzerinde senin için listeler.
+            </Text>
+            <Text style={styles.subtitle}>
+              Her tamirci hakkında detaylı bilgilere ulaşabilir, kullanıcı yorumlarını okuyabilir ve
+              kararını güvenle verebilirsin.
+            </Text>
+            <Text style={styles.subtitle}>
+              Dilersen tek dokunuşla yol tarifi alabilir ya da doğrudan arayarak iletişime geçebilirsin.
+              Motosiklet sorunlarına hızlı ve etkili çözüm artık cebinde!
+            </Text>
+          </View>
+        </FadeSlideTransition>
 
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => navigation.replace('FinalOnboarding')}
-          >
-            <Text style={styles.buttonText}>Devam Et</Text>
-          </TouchableOpacity>
-        </View>
+        <FadeSlideTransition>
+          <View style={styles.bottomSection}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.replace('FinalOnboarding')}
+            >
+              <Text style={styles.buttonText}>Devam Et</Text>
+            </TouchableOpacity>
+          </View>
+        </FadeSlideTransition>
       </View>
     </ImageBackground>
   );
 };
+
 
 const styles = StyleSheet.create({
   background: {
@@ -42,28 +61,32 @@ const styles = StyleSheet.create({
   },
   overlay: {
     flex: 1,
-    backgroundColor: 'rgba(255,130,0,0.3)',
-    justifyContent: 'flex-end',
-  },
-  content: {
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'space-between',
     paddingHorizontal: 32,
-    paddingBottom: 60,
-    alignItems: 'center',
+    paddingVertical: 60,
+  },
+  topSection: {
+    marginTop: 20,
   },
   title: {
-    fontSize: 32,
+    fontSize: 28,
     color: '#fff',
     fontWeight: 'bold',
-    marginBottom: 12,
+    marginBottom: 18,
     fontFamily: 'Montserrat-Bold',
     textAlign: 'center',
   },
   subtitle: {
-    fontSize: 18,
+    fontSize: 16,
     color: '#fff',
-    marginBottom: 32,
     fontFamily: 'Montserrat-Regular',
-    textAlign: 'center',
+    textAlign: 'left',
+    lineHeight: 24,
+    marginBottom: 16,
+  },
+  bottomSection: {
+    alignItems: 'center',
   },
   button: {
     backgroundColor: '#ff8200',
@@ -74,7 +97,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: 17,
     fontFamily: 'Montserrat-SemiBold',
   },
 });

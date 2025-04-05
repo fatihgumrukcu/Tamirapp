@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import {
   View,
@@ -22,6 +21,7 @@ const HomeScreen = () => {
   const [places, setPlaces] = useState<any[]>([]);
   const [mapType, setMapType] = useState<MapType>('standard');
   const [mapTypeMenuVisible, setMapTypeMenuVisible] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const mapRef = useRef<MapView | null>(null);
 
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
@@ -46,21 +46,53 @@ const HomeScreen = () => {
     );
   };
 
-  const searchNearby = async (keyword: string) => {
+  const searchNearby = async (keyword: string, category: string) => {
     if (!region) return;
-
+    setSelectedCategory(category);
+  
     const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${encodeURIComponent(
       keyword
     )}&location=${region.latitude},${region.longitude}&radius=5000&key=${GOOGLE_API_KEY}`;
-
+  
     try {
       const response = await axios.get(url);
       const results = response.data.results || [];
-      setPlaces(results);
+  
+      const filteredResults = results.filter((place: any) => {
+        const name = place.name?.toLowerCase() || '';
+        const types = place.types || [];
+  
+        const isTamirci =
+          (name.includes('tamir') || name.includes('servis')) &&
+          !name.includes('parça') &&
+          (types.includes('car_repair') || types.includes('car_service'));
+  
+        const isParçacı =
+          (name.includes('parça') || name.includes('yedek')) &&
+          !name.includes('tamir') &&
+          (types.includes('store') || types.includes('car_parts'));
+  
+        const isTow =
+          (name.includes('çekici') || types.includes('car_towing')) &&
+          !name.includes('tamir') &&
+          !name.includes('parça');
+  
+        if (category === 'tamirci') return isTamirci;
+        if (category === 'parçacı') return isParçacı;
+        if (category === 'çekici') return isTow;
+  
+        return false;
+      });
+  
+      setPlaces(filteredResults);
     } catch (error) {
       console.error(`❌ Arama hatası (${keyword}):`, error);
     }
   };
+  
+  
+  
+  
 
   useEffect(() => {
     getCurrentLocation();
@@ -76,13 +108,11 @@ const HomeScreen = () => {
           showsUserLocation={false}
           mapType={mapType}
         >
-          {region && (
-            <Marker
-              coordinate={region}
-              anchor={{ x: 0.5, y: 0.5 }}
-              image={require('../assets/icons/cursor.png')}
-            />
-          )}
+          <Marker
+            coordinate={region}
+            anchor={{ x: 0.5, y: 0.5 }}
+            image={require('../assets/icons/cursor.png')}
+          />
 
           {places.map((place, index) => {
             const lat = place.geometry?.location?.lat;
@@ -136,24 +166,38 @@ const HomeScreen = () => {
 
       <View style={styles.buttonGroup}>
         <TouchableOpacity
-          style={styles.actionButton}
-          onPress={() => searchNearby('motosiklet tamircisi')}
+          disabled={selectedCategory === 'tamirci'}
+          style={[
+            styles.actionButton,
+            selectedCategory === 'tamirci' && { backgroundColor: '#aaa' },
+          ]}
+          onPress={() => searchNearby('motosiklet tamircisi', 'tamirci')}
         >
           <Ionicons name="construct-outline" size={18} color="#fff" style={styles.icon} />
           <Text style={styles.buttonLabel}>Tamircileri Göster</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.actionButton, { backgroundColor: '#ffa600' }]}
-          onPress={() => searchNearby('motosiklet yedek parça')}
+          disabled={selectedCategory === 'parçacı'}
+          style={[
+            styles.actionButton,
+            { backgroundColor: '#ffa600' },
+            selectedCategory === 'parçacı' && { backgroundColor: '#aaa' },
+          ]}
+          onPress={() => searchNearby('motosiklet yedek parça', 'parçacı')}
         >
           <Ionicons name="cog-outline" size={18} color="#fff" style={styles.icon} />
           <Text style={styles.buttonLabel}>Parçacıları Göster</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.actionButton, { backgroundColor: '#cc4a00' }]}
-          onPress={() => searchNearby('çekici hizmeti')}
+          disabled={selectedCategory === 'çekici'}
+          style={[
+            styles.actionButton,
+            { backgroundColor: '#cc4a00' },
+            selectedCategory === 'çekici' && { backgroundColor: '#aaa' },
+          ]}
+          onPress={() => searchNearby('çekici hizmeti', 'çekici')}
         >
           <Ionicons name="car-outline" size={18} color="#fff" style={styles.icon} />
           <Text style={styles.buttonLabel}>Çekici Hizmeti</Text>
@@ -211,9 +255,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowOffset: { width: 0, height: 1 },
   },
+
   icon: {
     marginRight: 8,
   },
+
   buttonLabel: {
     color: '#fff',
     fontWeight: '600',
@@ -245,11 +291,13 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     zIndex: 5,
   },
+
   mapTypeButton: {
     paddingVertical: 8,
     paddingHorizontal: 14,
     borderRadius: 6,
   },
+
   mapTypeText: {
     fontSize: 14,
     fontFamily: 'Montserrat-Medium',

@@ -40,6 +40,7 @@ const RootNavigator = () => {
           options={{
             headerShown: true,
             title: 'Tamirci Detay',
+            headerBackTitle: 'Geri Dön', // 👈 burası ekleniyor
           }}
         />
       </Stack.Navigator>

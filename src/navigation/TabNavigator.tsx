@@ -18,6 +18,7 @@ const TabNavigator = () => (
       tabBarActiveTintColor: '#ffffff',
       tabBarInactiveTintColor: '#ffddbb',
       tabBarBackground: () => <View style={styles.tabBackground} />,
+      tabBarLabel: 'Geri Dön', // 🔁 Tüm sekmeler için aynı label
       tabBarIcon: ({ focused, color, size }) => {
         let iconName = '';
 
@@ -29,9 +30,21 @@ const TabNavigator = () => (
       },
     })}
   >
-    <Tab.Screen name="Anasayfa" component={HomeScreen} />
-    <Tab.Screen name="Favorilerim" component={FavoritesScreen} />
-    <Tab.Screen name="Ayarlar" component={SettingsScreen} />
+    <Tab.Screen
+      name="Anasayfa"
+      component={HomeScreen}
+      options={{ tabBarLabel: 'Geri Dön' }}
+    />
+    <Tab.Screen
+      name="Favorilerim"
+      component={FavoritesScreen}
+      options={{ tabBarLabel: 'Geri Dön' }}
+    />
+    <Tab.Screen
+      name="Ayarlar"
+      component={SettingsScreen}
+      options={{ tabBarLabel: 'Geri Dön' }}
+    />
   </Tab.Navigator>
 );
 

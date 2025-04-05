@@ -8,13 +8,16 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useFocusEffect } from '@react-navigation/native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../navigation/RootNavigator';
 import { useTheme } from '../context/ThemeContext';
 
 const FAVORITES_KEY = 'FAVORITE_PLACES';
 
 const FavoritesScreen = () => {
   const { isDarkMode } = useTheme();
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   const [favorites, setFavorites] = useState<any[]>([]);
 
   const loadFavorites = async () => {
@@ -42,7 +45,8 @@ const FavoritesScreen = () => {
   );
 
   const renderItem = ({ item }: { item: any }) => (
-    <View
+    <TouchableOpacity
+      onPress={() => navigation.navigate('Detail', { place: item })}
       style={[
         styles.card,
         {
@@ -53,7 +57,7 @@ const FavoritesScreen = () => {
     >
       <Text style={[styles.name, { color: '#fff' }]}>{item.name}</Text>
       <Text style={[styles.address, { color: '#fff' }]}>{item.formatted_address}</Text>
-    </View>
+    </TouchableOpacity>
   );
 
   return (

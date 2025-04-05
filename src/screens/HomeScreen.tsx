@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useRef } from 'react';
 import {
   View,
@@ -69,45 +70,48 @@ const HomeScreen = () => {
     <SafeAreaView style={styles.container} edges={['left', 'right']}>
       {region && (
         <MapView
-        ref={mapRef}
-        style={styles.map}
-        region={region}
-        showsUserLocation={false} // 🔁 Kapatıldı çünkü kendi marker'ımızı ekliyoruz
-        mapType={mapType}
-      >
-        {region && (
-          <Marker
-            coordinate={region}
-            anchor={{ x: 0.5, y: 0.5 }}
-            image={require('../assets/icons/cursor.png')} // 👈 senin PNG dosyan
-          />
-        )}
-      
-        {places.map((place, index) => {
-          const lat = place.geometry?.location?.lat;
-          const lng = place.geometry?.location?.lng;
-          if (!lat || !lng) return null;
-      
-          const name = place.name?.toLowerCase() || '';
-          const isRepair = name.includes('tamir') || name.includes('servis');
-      
-          const icon = isRepair
-            ? require('../assets/icons/wrench.png')
-            : require('../assets/icons/shop.png');
-      
-          return (
+          ref={mapRef}
+          style={styles.map}
+          region={region}
+          showsUserLocation={false}
+          mapType={mapType}
+        >
+          {region && (
             <Marker
-              key={index}
-              coordinate={{ latitude: lat, longitude: lng }}
-              image={icon}
-              onPress={() => navigation.navigate('Detail', { place })}
+              coordinate={region}
+              anchor={{ x: 0.5, y: 0.5 }}
+              image={require('../assets/icons/cursor.png')}
             />
-          );
-        })}
-      </MapView>
+          )}
+
+          {places.map((place, index) => {
+            const lat = place.geometry?.location?.lat;
+            const lng = place.geometry?.location?.lng;
+            if (!lat || !lng) return null;
+
+            const name = place.name?.toLowerCase() || '';
+            const isRepair = name.includes('tamir') || name.includes('servis');
+            const isTow = name.includes('çekici');
+
+            let icon = require('../assets/icons/shop.png');
+            if (isRepair) {
+              icon = require('../assets/icons/wrench.png');
+            } else if (isTow) {
+              icon = require('../assets/icons/tow-truck.png');
+            }
+
+            return (
+              <Marker
+                key={index}
+                coordinate={{ latitude: lat, longitude: lng }}
+                image={icon}
+                onPress={() => navigation.navigate('Detail', { place })}
+              />
+            );
+          })}
+        </MapView>
       )}
 
-      {/* Harita Türü Seçici Toggle */}
       <TouchableOpacity style={styles.mapTypeToggle} onPress={() => setMapTypeMenuVisible(prev => !prev)}>
         <Ionicons name="layers-outline" size={22} color="#fff" />
       </TouchableOpacity>
@@ -145,6 +149,14 @@ const HomeScreen = () => {
         >
           <Ionicons name="cog-outline" size={18} color="#fff" style={styles.icon} />
           <Text style={styles.buttonLabel}>Parçacıları Göster</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.actionButton, { backgroundColor: '#cc4a00' }]}
+          onPress={() => searchNearby('çekici hizmeti')}
+        >
+          <Ionicons name="car-outline" size={18} color="#fff" style={styles.icon} />
+          <Text style={styles.buttonLabel}>Çekici Hizmeti</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>

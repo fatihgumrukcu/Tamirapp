@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
   Image,
   Alert,
-  useColorScheme,
 } from 'react-native';
 import { RouteProp, useRoute } from '@react-navigation/native';
 import axios from 'axios';
@@ -40,23 +39,24 @@ const RepairDetailScreen = () => {
   const place = route.params.place;
 
   const [reviews, setReviews] = useState([]);
+  const [phone, setPhone] = useState<string | null>(null);
   const [isFavorite, setIsFavorite] = useState(false);
   const { isDarkMode } = useTheme();
 
   useEffect(() => {
-    const fetchReviews = async () => {
+    const fetchDetails = async () => {
       try {
-        const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${place.place_id}&fields=reviews&key=${GOOGLE_API_KEY}`;
+        const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${place.place_id}&fields=formatted_phone_number,reviews&key=${GOOGLE_API_KEY}`;
         const response = await axios.get(url);
-        if (response.data.result?.reviews) {
-          setReviews(response.data.result.reviews);
-        }
+        const result = response.data.result;
+        if (result?.formatted_phone_number) setPhone(result.formatted_phone_number);
+        if (result?.reviews) setReviews(result.reviews);
       } catch (error) {
-        console.error('Yorumlar alınamadı:', error);
+        console.error('Detaylar alınamadı:', error);
       }
     };
 
-    fetchReviews();
+    fetchDetails();
     checkIfFavorite();
   }, []);
 
@@ -89,6 +89,12 @@ const RepairDetailScreen = () => {
     Linking.openURL(`https://www.google.com/maps/dir/?api=1&destination=${query}`);
   };
 
+  const callPhone = () => {
+    if (phone) {
+      Linking.openURL(`tel:${phone}`);
+    }
+  };
+
   return (
     <ScrollView
       contentContainerStyle={[
@@ -109,6 +115,10 @@ const RepairDetailScreen = () => {
         Adres: {place.formatted_address}
       </Text>
 
+      {phone && (
+        <Text style={[styles.info, isDarkMode && { color: '#ccc' }]}>Telefon: {phone}</Text>
+      )}
+
       {place.rating && (
         <Text style={[styles.info, isDarkMode && { color: '#ccc' }]}>
           Puan: {place.rating} ({place.user_ratings_total} yorum)
@@ -121,39 +131,25 @@ const RepairDetailScreen = () => {
         </Text>
       )}
 
-      <TouchableOpacity
-        style={[
-          styles.button,
-          { backgroundColor: isDarkMode ? '#0a84ff' : '#0a84ff' },
-        ]}
-        onPress={openInMaps}
-      >
-        <Text style={[styles.buttonText, { color: '#fff' }]}>Yol Tarifi Al</Text>
+      <TouchableOpacity style={[styles.button, { backgroundColor: '#0a84ff' }]} onPress={openInMaps}>
+        <Text style={styles.buttonText}>Yol Tarifi Al</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity
-        style={[
-          styles.button,
-          { backgroundColor: '#ff8200' },
-        ]}
-        onPress={toggleFavorite}
-      >
-        <Text style={styles.buttonText}>
-          {isFavorite ? 'Favorilerden Çıkar' : 'Favorilere Ekle'}
-        </Text>
+      {phone && (
+        <TouchableOpacity style={[styles.button, { backgroundColor: '#34c759' }]} onPress={callPhone}>
+          <Text style={styles.buttonText}>Ara</Text>
+        </TouchableOpacity>
+      )}
+
+      <TouchableOpacity style={[styles.button, { backgroundColor: '#ff8200' }]} onPress={toggleFavorite}>
+        <Text style={styles.buttonText}>{isFavorite ? 'Favorilerden Çıkar' : 'Favorilere Ekle'}</Text>
       </TouchableOpacity>
 
       <Text style={[styles.reviewsTitle, isDarkMode && { color: '#fff' }]}>Kullanıcı Yorumları</Text>
 
       {reviews.length > 0 ? (
         reviews.map((review, index) => (
-          <View
-            key={index}
-            style={[
-              styles.reviewCard,
-              isDarkMode && { backgroundColor: '#1f1f1f' },
-            ]}
-          >
+          <View key={index} style={[styles.reviewCard, isDarkMode && { backgroundColor: '#1f1f1f' }]}>
             <Text style={[styles.reviewAuthor, isDarkMode && { color: '#fff' }]}>
               {review.author_name}
             </Text>

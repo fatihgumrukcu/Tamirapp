@@ -16,7 +16,7 @@ const OnboardingScreen = () => {
 
   return (
     <ImageBackground
-      source={require('../assets/images/Onboarding.png')}
+      source={require('../assets/images/shoppinguser.png')}
       style={styles.background}
       resizeMode="cover"
     >
@@ -43,8 +43,7 @@ const OnboardingScreen = () => {
           <View style={styles.bottomSection}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => navigation.replace('FinalOnboarding')}
-            >
+              onPress={() => navigation.replace('TowOnboarding')}>
               <Text style={styles.buttonText}>Devam Et</Text>
             </TouchableOpacity>
           </View>

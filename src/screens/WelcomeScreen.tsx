@@ -22,10 +22,21 @@ const WelcomeScreen = () => {
     >
       <View style={styles.overlay}>
         <FadeSlideTransition>
-          <View style={styles.topContainer}>
-            <Text style={styles.title}>Hoş Geldiniz</Text>
-            <Text style={styles.subtitle}>TamirApp’le Tamir Et</Text>
-          </View>
+        <View style={styles.topContainer}>
+        <Text style={styles.title}>Hoş Geldiniz</Text>
+        <Text style={styles.subtitle}>TamirApp’le Tamir Et</Text>
+        
+        <Text style={styles.description}>
+    TamirApp, motosiklet kullanıcılarının ihtiyaç duyduğu tamircileri, yedek parça satıcılarını
+    ve yol yardım hizmetlerini tek bir platformda bulmalarını sağlar.
+  </Text>
+
+  <Text style={styles.description}>
+    Harita üzerinden en yakın noktaları keşfet, iletişime geç ve ihtiyacını hızlıca karşıla.
+    Güvenilir, hızlı ve kullanıcı dostu bir deneyim artık cebinde.
+  </Text>
+        </View>
+
         </FadeSlideTransition>
 
         <FadeSlideTransition>
@@ -53,6 +64,15 @@ const styles = StyleSheet.create({
   paddingHorizontal: 32,
   paddingVertical: 60,
 },
+description: {
+  fontSize: 18,
+  color: '#ddd',
+  fontFamily: 'Montserrat-Regular',
+  textAlign: 'left',
+  lineHeight: 26,
+  marginTop: 16,
+},
+
 
 
   topContainer: {

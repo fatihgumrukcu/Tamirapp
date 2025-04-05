@@ -15,10 +15,10 @@
 		6F88570849ED48BC8BE32426 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 496F1A7AC96D4126BD374339 /* Montserrat-BoldItalic.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		7E760127C29B478B924BFB80 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C33E152615643748AE822DA /* Montserrat-Regular.ttf */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		82F54E7317264816824F0449 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A9670A97A424036B30355F0 /* Montserrat-Bold.ttf */; };
 		9EB0BDAA876B47CDA06813AA /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B837ADB833904FA9896739E5 /* Montserrat-Italic.ttf */; };
 		AF5A8BE12D9DEA6E0045BB70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5A8BE02D9DEA6E0045BB70 /* Assets.xcassets */; };
+		AF6875AE2D9E95E500C3BA03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6875AD2D9E95E500C3BA03 /* LaunchScreen.storyboard */; };
 		C2D4ECC644794D658C49F7D4 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 002BE611328A404086293DFE /* Montserrat-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
@@ -35,9 +35,9 @@
 		4E308618BB364246BB347709 /* Montserrat-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Italic-VariableFont_wght.ttf"; path = "../src/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		64AF3D294848414AABFB4F42 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Medium.ttf"; path = "../src/assets/fonts/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Tamirapp/AppDelegate.swift; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Tamirapp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F4D18AF936CCB73DA405136 /* Pods-Tamirapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tamirapp.release.xcconfig"; path = "Target Support Files/Pods-Tamirapp/Pods-Tamirapp.release.xcconfig"; sourceTree = "<group>"; };
 		AF5A8BE02D9DEA6E0045BB70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF6875AD2D9E95E500C3BA03 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B837ADB833904FA9896739E5 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Italic.ttf"; path = "../src/assets/fonts/Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		E92D49EB5D1401B9973E2DE7 /* libPods-Tamirapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tamirapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -61,8 +61,8 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				761780EC2CA45674006654EE /* AppDelegate.swift */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				AF6875AD2D9E95E500C3BA03 /* LaunchScreen.storyboard */,
 				AF5A8BE02D9DEA6E0045BB70 /* Assets.xcassets */,
 			);
 			name = Tamirapp;
@@ -190,7 +190,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				AF5A8BE12D9DEA6E0045BB70 /* Assets.xcassets in Resources */,
 				62077EFB3BDA55A57BB80C3D /* PrivacyInfo.xcprivacy in Resources */,
@@ -200,6 +199,7 @@
 				9EB0BDAA876B47CDA06813AA /* Montserrat-Italic.ttf in Resources */,
 				2AEA4258FB89469FA9EC02D0 /* Montserrat-Medium.ttf in Resources */,
 				7E760127C29B478B924BFB80 /* Montserrat-Regular.ttf in Resources */,
+				AF6875AE2D9E95E500C3BA03 /* LaunchScreen.storyboard in Resources */,
 				C2D4ECC644794D658C49F7D4 /* Montserrat-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,13 +253,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tamirapp/Pods-Tamirapp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tamirapp/Pods-Tamirapp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -274,13 +270,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tamirapp/Pods-Tamirapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tamirapp/Pods-Tamirapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -311,6 +303,7 @@
 				DEVELOPMENT_TEAM = VG3766N38N;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Tamirapp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tamirapp;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -344,6 +337,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VG3766N38N;
 				INFOPLIST_FILE = Tamirapp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tamirapp;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -436,7 +430,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -505,7 +502,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

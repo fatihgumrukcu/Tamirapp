@@ -1,3 +1,4 @@
+// src/screens/TowOnboardingScreen.tsx
 import React from 'react';
 import {
   View,
@@ -7,49 +8,43 @@ import {
   ImageBackground,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/RootNavigator';
 import FadeSlideTransition from '../components/FadeSlideTransition';
 
-const FinalOnboardingScreen = () => {
+const TowOnboardingScreen = () => {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   return (
     <ImageBackground
-      source={require('../assets/images/Onboarding.png')}
+      source={require('../assets/images/tow-bg.png')} // 📸 Arka plan resmi
       style={styles.background}
       resizeMode="cover"
     >
       <View style={styles.overlay}>
-        <FadeSlideTransition direction="right">
+        <FadeSlideTransition>
           <View style={styles.topSection}>
-            <Text style={styles.title}>Yedek Parçaya mı İhtiyacın Var?</Text>
-
+            <Text style={styles.title}>Yolda mı Kaldın?</Text>
             <Text style={styles.subtitle}>
-              Tamirapp sayesinde artık yedek parça aramak için saatler harcaman gerekmiyor. Uygulama,
-              konumuna en yakın yedek parça satıcılarını harita üzerinden kolayca görüntülemeni sağlar.
+                TamirApp artık sadece tamirci ve parçacılarla sınırlı değil. Artık acil durumlarda konumuna en yakın çekici hizmetine saniyeler içinde ulaşabilirsin. 
+                Uygulama senin için çevrendeki tüm güvenilir çekicileri harita üzerinden listeler ve tek dokunuşla iletişime geçmeni sağlar.
             </Text>
 
             <Text style={styles.subtitle}>
-              Her satıcıya tek tıkla ulaşabilir, yol tarifi alabilir ve doğrudan iletişime geçebilirsin.
-              İhtiyacın olan parçayı bulmak artık çok daha kolay ve hızlı.
-            </Text>
-
-            <Text style={styles.subtitle}>
-              Tamirapp kullanıcı dostu arayüzü ve işlevsel yapısıyla motosiklet sahiplerine yepyeni
-              bir kolaylık sunar. Seni de bu deneyime davet ediyoruz.
+            Gece ya da gündüz fark etmeden, motosikletin seni yolda bıraktığında yardım hemen cebinde. 
+            Güvenilir, hızlı ve profesyonel çekici hizmetleri artık cebinde.
             </Text>
           </View>
         </FadeSlideTransition>
 
-        <FadeSlideTransition direction="right">
+        <FadeSlideTransition>
           <View style={styles.bottomSection}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => navigation.replace('Tabs')}
+              onPress={() => navigation.replace('FinalOnboarding')}
 
             >
-              <Text style={styles.buttonText}>Uygulamaya Başla</Text>
+              <Text style={styles.buttonText}>Devam Et</Text>
             </TouchableOpacity>
           </View>
         </FadeSlideTransition>
@@ -101,4 +96,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FinalOnboardingScreen;
+export default TowOnboardingScreen;

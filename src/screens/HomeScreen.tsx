@@ -49,50 +49,46 @@ const HomeScreen = () => {
   const searchNearby = async (keyword: string, category: string) => {
     if (!region) return;
     setSelectedCategory(category);
-  
+
     const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${encodeURIComponent(
       keyword
     )}&location=${region.latitude},${region.longitude}&radius=5000&key=${GOOGLE_API_KEY}`;
-  
+
     try {
       const response = await axios.get(url);
       const results = response.data.results || [];
-  
+
       const filteredResults = results.filter((place: any) => {
         const name = place.name?.toLowerCase() || '';
         const types = place.types || [];
-  
+
         const isTamirci =
           (name.includes('tamir') || name.includes('servis')) &&
           !name.includes('parça') &&
           (types.includes('car_repair') || types.includes('car_service'));
-  
+
         const isParçacı =
           (name.includes('parça') || name.includes('yedek')) &&
           !name.includes('tamir') &&
           (types.includes('store') || types.includes('car_parts'));
-  
+
         const isTow =
           (name.includes('çekici') || types.includes('car_towing')) &&
           !name.includes('tamir') &&
           !name.includes('parça');
-  
+
         if (category === 'tamirci') return isTamirci;
         if (category === 'parçacı') return isParçacı;
         if (category === 'çekici') return isTow;
-  
+
         return false;
       });
-  
+
       setPlaces(filteredResults);
     } catch (error) {
       console.error(`❌ Arama hatası (${keyword}):`, error);
     }
   };
-  
-  
-  
-  
 
   useEffect(() => {
     getCurrentLocation();
@@ -166,10 +162,9 @@ const HomeScreen = () => {
 
       <View style={styles.buttonGroup}>
         <TouchableOpacity
-          disabled={selectedCategory === 'tamirci'}
           style={[
             styles.actionButton,
-            selectedCategory === 'tamirci' && { backgroundColor: '#aaa' },
+            selectedCategory === 'tamirci' && { backgroundColor: '#4CAF50' },
           ]}
           onPress={() => searchNearby('motosiklet tamircisi', 'tamirci')}
         >
@@ -178,11 +173,10 @@ const HomeScreen = () => {
         </TouchableOpacity>
 
         <TouchableOpacity
-          disabled={selectedCategory === 'parçacı'}
           style={[
             styles.actionButton,
             { backgroundColor: '#ffa600' },
-            selectedCategory === 'parçacı' && { backgroundColor: '#aaa' },
+            selectedCategory === 'parçacı' && { backgroundColor: '#4CAF50' },
           ]}
           onPress={() => searchNearby('motosiklet yedek parça', 'parçacı')}
         >
@@ -191,11 +185,10 @@ const HomeScreen = () => {
         </TouchableOpacity>
 
         <TouchableOpacity
-          disabled={selectedCategory === 'çekici'}
           style={[
             styles.actionButton,
             { backgroundColor: '#cc4a00' },
-            selectedCategory === 'çekici' && { backgroundColor: '#aaa' },
+            selectedCategory === 'çekici' && { backgroundColor: '#4CAF50' },
           ]}
           onPress={() => searchNearby('çekici hizmeti', 'çekici')}
         >

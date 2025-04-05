@@ -33,17 +33,17 @@ const TabNavigator = () => (
     <Tab.Screen
       name="Anasayfa"
       component={HomeScreen}
-      options={{ tabBarLabel: 'Geri Dön' }}
+      options={{ tabBarLabel: 'Anasayfa' }}
     />
     <Tab.Screen
       name="Favorilerim"
       component={FavoritesScreen}
-      options={{ tabBarLabel: 'Geri Dön' }}
+      options={{ tabBarLabel: 'Favorilerim' }}
     />
     <Tab.Screen
       name="Ayarlar"
       component={SettingsScreen}
-      options={{ tabBarLabel: 'Geri Dön' }}
+      options={{ tabBarLabel: 'Ayarlar' }}
     />
   </Tab.Navigator>
 );

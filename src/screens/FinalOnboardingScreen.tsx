@@ -21,7 +21,7 @@ const FinalOnboardingScreen = () => {
       resizeMode="cover"
     >
       <View style={styles.overlay}>
-        <FadeSlideTransition direction="right">
+        <FadeSlideTransition>
           <View style={styles.topSection}>
             <Text style={styles.title}>Yedek Parçaya mı İhtiyacın Var?</Text>
 
@@ -42,7 +42,7 @@ const FinalOnboardingScreen = () => {
           </View>
         </FadeSlideTransition>
 
-        <FadeSlideTransition direction="right">
+        <FadeSlideTransition>
           <View style={styles.bottomSection}>
             <TouchableOpacity
               style={styles.button}

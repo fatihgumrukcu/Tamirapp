@@ -24,10 +24,10 @@ const WelcomeScreen = () => {
         <FadeSlideTransition>
         <View style={styles.topContainer}>
         <Text style={styles.title}>Hoş Geldiniz</Text>
-        <Text style={styles.subtitle}>TamirApp’le Tamir Et</Text>
+        <Text style={styles.subtitle}>Tamirapp’le Tamir Et</Text>
         
         <Text style={styles.description}>
-    TamirApp, motosiklet kullanıcılarının ihtiyaç duyduğu tamircileri, yedek parça satıcılarını
+    Tamirapp, motosiklet kullanıcılarının ihtiyaç duyduğu tamircileri, yedek parça satıcılarını
     ve yol yardım hizmetlerini tek bir platformda bulmalarını sağlar.
   </Text>
 

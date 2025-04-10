@@ -24,7 +24,7 @@ const SettingsScreen = () => {
   };
 
   const handleContactSupport = () => {
-    Linking.openURL('mailto:support@tamirapp.com');
+    Linking.openURL('mailto:Tamirapp@yandex.com');
   };
 
   const handleClearData = async () => {
@@ -72,7 +72,7 @@ const SettingsScreen = () => {
             <Text style={[styles.label, isDarkMode && { color: '#eee' }]}>Hakkımızda</Text>
           </TouchableOpacity>
 
-          <Text style={[styles.version, isDarkMode && { color: '#666' }]}>TamirApp v1.0.0</Text>
+          <Text style={[styles.version, isDarkMode && { color: '#666' }]}>Tamirapp v1.2</Text>
         </ScrollView>
       </SafeAreaView>
 

@@ -4,8 +4,11 @@ import {
   StyleSheet,
   TouchableOpacity,
   Text,
+  Image,
+  Platform,
+  PermissionsAndroid,
 } from 'react-native';
-import MapView, { Marker, Region, MapType } from 'react-native-maps';
+import MapView, { Marker, Region, MapType, PROVIDER_GOOGLE } from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import axios from 'axios';
@@ -25,6 +28,33 @@ const HomeScreen = () => {
   const mapRef = useRef<MapView | null>(null);
 
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
+  const requestLocationPermission = async () => {
+    if (Platform.OS === 'android') {
+      try {
+        const granted = await PermissionsAndroid.request(
+          PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+          {
+            title: 'Konum İzni',
+            message: 'Haritayı gösterebilmek için konum iznine ihtiyacımız var.',
+            buttonNeutral: 'Daha Sonra',
+            buttonNegative: 'İptal',
+            buttonPositive: 'Tamam',
+          }
+        );
+        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+          console.log(' Konum izni verildi');
+          getCurrentLocation();
+        } else {
+          console.log(' Konum izni reddedildi');
+        }
+      } catch (err) {
+        console.warn(err);
+      }
+    } else {
+      getCurrentLocation();
+    }
+  };
 
   const getCurrentLocation = () => {
     Geolocation.getCurrentPosition(
@@ -91,7 +121,7 @@ const HomeScreen = () => {
   };
 
   useEffect(() => {
-    getCurrentLocation();
+    requestLocationPermission();
   }, []);
 
   return (
@@ -101,14 +131,24 @@ const HomeScreen = () => {
           ref={mapRef}
           style={styles.map}
           region={region}
-          showsUserLocation={false}
+          showsUserLocation={true}
           mapType={mapType}
+          // provider={Platform.OS === 'android' ? PROVIDER_GOOGLE : undefined}
+          provider="google"
+          followsUserLocation={true}
+          initialRegion={{
+            latitude: 37.78825,
+            longitude: -122.4324,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
         >
-          <Marker
-            coordinate={region}
-            anchor={{ x: 0.5, y: 0.5 }}
-            image={require('../assets/icons/cursor.png')}
-          />
+          <Marker coordinate={region} anchor={{ x: 0.5, y: 0.5 }}>
+            <Image
+              source={require('../assets/icons/cursor.png')}
+              style={{ width: 150, height: 150, resizeMode: 'contain' }}
+            />
+          </Marker>
 
           {places.map((place, index) => {
             const lat = place.geometry?.location?.lat;
@@ -120,19 +160,21 @@ const HomeScreen = () => {
             const isTow = name.includes('çekici');
 
             let icon = require('../assets/icons/shop.png');
-            if (isRepair) {
-              icon = require('../assets/icons/wrench.png');
-            } else if (isTow) {
-              icon = require('../assets/icons/tow-truck.png');
-            }
+            if (isRepair) icon = require('../assets/icons/wrench.png');
+            else if (isTow) icon = require('../assets/icons/tow-truck.png');
 
             return (
               <Marker
                 key={index}
                 coordinate={{ latitude: lat, longitude: lng }}
-                image={icon}
                 onPress={() => navigation.navigate('Detail', { place })}
-              />
+                anchor={{ x: 0.5, y: 0.5 }}
+              >
+                <Image
+                  source={icon}
+                  style={{ width: 150, height: 150, resizeMode: 'contain' }}
+                />
+              </Marker>
             );
           })}
         </MapView>
@@ -144,15 +186,18 @@ const HomeScreen = () => {
 
       {mapTypeMenuVisible && (
         <View style={styles.mapTypeDropdown}>
-          <TouchableOpacity onPress={() => { setMapType('standard'); setMapTypeMenuVisible(false); }} style={styles.mapTypeButton}>
-            <Text style={styles.mapTypeText}>Standart</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => { setMapType('satellite'); setMapTypeMenuVisible(false); }} style={styles.mapTypeButton}>
-            <Text style={styles.mapTypeText}>Uydu</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => { setMapType('hybrid'); setMapTypeMenuVisible(false); }} style={styles.mapTypeButton}>
-            <Text style={styles.mapTypeText}>Hibrit</Text>
-          </TouchableOpacity>
+          {['standard', 'satellite', 'hybrid'].map(type => (
+            <TouchableOpacity
+              key={type}
+              onPress={() => {
+                setMapType(type as MapType);
+                setMapTypeMenuVisible(false);
+              }}
+              style={styles.mapTypeButton}
+            >
+              <Text style={styles.mapTypeText}>{type}</Text>
+            </TouchableOpacity>
+          ))}
         </View>
       )}
 
@@ -162,10 +207,7 @@ const HomeScreen = () => {
 
       <View style={styles.buttonGroup}>
         <TouchableOpacity
-          style={[
-            styles.actionButton,
-            selectedCategory === 'tamirci' && { backgroundColor: '#4CAF50' },
-          ]}
+          style={[styles.actionButton, selectedCategory === 'tamirci' && { backgroundColor: '#4CAF50' }]}
           onPress={() => searchNearby('motosiklet tamircisi', 'tamirci')}
         >
           <Ionicons name="construct-outline" size={18} color="#fff" style={styles.icon} />
@@ -173,11 +215,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[
-            styles.actionButton,
-            { backgroundColor: '#ffa600' },
-            selectedCategory === 'parçacı' && { backgroundColor: '#4CAF50' },
-          ]}
+          style={[styles.actionButton, { backgroundColor: '#ffa600' }, selectedCategory === 'parçacı' && { backgroundColor: '#4CAF50' }]}
           onPress={() => searchNearby('motosiklet yedek parça', 'parçacı')}
         >
           <Ionicons name="cog-outline" size={18} color="#fff" style={styles.icon} />
@@ -185,11 +223,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[
-            styles.actionButton,
-            { backgroundColor: '#cc4a00' },
-            selectedCategory === 'çekici' && { backgroundColor: '#4CAF50' },
-          ]}
+          style={[styles.actionButton, { backgroundColor: '#cc4a00' }, selectedCategory === 'çekici' && { backgroundColor: '#4CAF50' }]}
           onPress={() => searchNearby('çekici hizmeti', 'çekici')}
         >
           <Ionicons name="car-outline" size={18} color="#fff" style={styles.icon} />
@@ -203,7 +237,6 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   map: { flex: 1 },
-
   googleLocateButton: {
     position: 'absolute',
     bottom: 40,
@@ -223,7 +256,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     zIndex: 5,
   },
-
   buttonGroup: {
     position: 'absolute',
     bottom: 60,
@@ -231,7 +263,6 @@ const styles = StyleSheet.create({
     gap: 12,
     zIndex: 4,
   },
-
   actionButton: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -248,18 +279,15 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowOffset: { width: 0, height: 1 },
   },
-
   icon: {
     marginRight: 8,
   },
-
   buttonLabel: {
     color: '#fff',
     fontWeight: '600',
     fontSize: 15,
     fontFamily: 'Montserrat-SemiBold',
   },
-
   mapTypeToggle: {
     position: 'absolute',
     top: 100,
@@ -269,7 +297,6 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     zIndex: 6,
   },
-
   mapTypeDropdown: {
     position: 'absolute',
     top: 160,
@@ -284,13 +311,11 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     zIndex: 5,
   },
-
   mapTypeButton: {
     paddingVertical: 8,
     paddingHorizontal: 14,
     borderRadius: 6,
   },
-
   mapTypeText: {
     fontSize: 14,
     fontFamily: 'Montserrat-Medium',

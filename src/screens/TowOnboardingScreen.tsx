@@ -26,7 +26,7 @@ const TowOnboardingScreen = () => {
           <View style={styles.topSection}>
             <Text style={styles.title}>Yolda mı Kaldın?</Text>
             <Text style={styles.subtitle}>
-                TamirApp artık sadece tamirci ve parçacılarla sınırlı değil. Artık acil durumlarda konumuna en yakın çekici hizmetine saniyeler içinde ulaşabilirsin. 
+                Tamirapp artık sadece tamirci ve parçacılarla sınırlı değil. Artık acil durumlarda konumuna en yakın çekici hizmetine saniyeler içinde ulaşabilirsin. 
                 Uygulama senin için çevrendeki tüm güvenilir çekicileri harita üzerinden listeler ve tek dokunuşla iletişime geçmeni sağlar.
             </Text>
 

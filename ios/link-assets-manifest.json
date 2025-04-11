@@ -2,32 +2,20 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "src/assets/fonts/Montserrat-Bold.ttf",
-      "sha1": "c7d907722af4fb845ab97d515bb414f29651f000"
+      "path": "src/assets/icons/cursor.png",
+      "sha1": "89ce6a670125b1f9bdbc2b8fa3a55858cc53b2e5"
     },
     {
-      "path": "src/assets/fonts/Montserrat-BoldItalic.ttf",
-      "sha1": "eee7f440754eb6ecbfcc461e9af2536ed0286a7f"
+      "path": "src/assets/icons/shop.png",
+      "sha1": "de22a4a05d04a5e121f7bd3203e1f870effc1dba"
     },
     {
-      "path": "src/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf",
-      "sha1": "7ba6660400f0cb201da6facd9cddb768a182c968"
+      "path": "src/assets/icons/tow_truck.png",
+      "sha1": "99ee9dee5ff03a42370293dad5d650e1b9e7e971"
     },
     {
-      "path": "src/assets/fonts/Montserrat-Italic.ttf",
-      "sha1": "763e9c22a750ff1241aacf1e0e4d3050827b9783"
-    },
-    {
-      "path": "src/assets/fonts/Montserrat-Medium.ttf",
-      "sha1": "4656e40419da86a5fec473ea8e7fc0efef183f05"
-    },
-    {
-      "path": "src/assets/fonts/Montserrat-Regular.ttf",
-      "sha1": "1c8119b38eef1914a4fbd9f6cfdedf198445ab97"
-    },
-    {
-      "path": "src/assets/fonts/Montserrat-VariableFont_wght.ttf",
-      "sha1": "e3f5228e62455228b55694f1cb5ac40f9682a86b"
+      "path": "src/assets/icons/wrench.png",
+      "sha1": "3fd5ca5ba7e3bbb721c95252acc1997537474f34"
     }
   ]
 }

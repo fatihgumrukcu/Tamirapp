@@ -42,13 +42,6 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Ionicons.ttf</string>
-		<string>Montserrat-Bold.ttf</string>
-		<string>Montserrat-BoldItalic.ttf</string>
-		<string>Montserrat-Italic-VariableFont_wght.ttf</string>
-		<string>Montserrat-Italic.ttf</string>
-		<string>Montserrat-Medium.ttf</string>
-		<string>Montserrat-Regular.ttf</string>
-		<string>Montserrat-VariableFont_wght.ttf</string>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

@@ -61,15 +61,18 @@ const HomeScreen = () => {
       position => {
         const { latitude, longitude } = position.coords;
         const newRegion = {
-          latitude,
-          longitude,
+          latitude: 41.004447304134246,
+          longitude: 29.150110929930978,
           latitudeDelta: 0.01,
           longitudeDelta: 0.01,
         };
         setRegion(newRegion);
-        mapRef.current?.animateToRegion(newRegion, 1000);
+         // Haritayı yeni konuma odakla
+        if (mapRef.current) {
+          mapRef.current.animateToRegion(newRegion, 1000); // 1000 ms animasyon süresi
+        }
       },
-      error => {
+      (error) => {
         console.log('🚫 Konum alınamadı:', error);
       },
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
@@ -79,50 +82,64 @@ const HomeScreen = () => {
   const searchNearby = async (keyword: string, category: string) => {
     if (!region) return;
     setSelectedCategory(category);
-
+  
     const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${encodeURIComponent(
       keyword
     )}&location=${region.latitude},${region.longitude}&radius=5000&key=${GOOGLE_API_KEY}`;
-
+  
     try {
       const response = await axios.get(url);
       const results = response.data.results || [];
-
+  
+      console.log("🔍 Gelen sonuç sayısı:", results.length);
+  
       const filteredResults = results.filter((place: any) => {
         const name = place.name?.toLowerCase() || '';
         const types = place.types || [];
-
+  
         const isTamirci =
           (name.includes('tamir') || name.includes('servis')) &&
           !name.includes('parça') &&
           (types.includes('car_repair') || types.includes('car_service'));
-
+  
         const isParçacı =
           (name.includes('parça') || name.includes('yedek')) &&
           !name.includes('tamir') &&
           (types.includes('store') || types.includes('car_parts'));
-
+  
         const isTow =
           (name.includes('çekici') || types.includes('car_towing')) &&
           !name.includes('tamir') &&
           !name.includes('parça');
-
+  
         if (category === 'tamirci') return isTamirci;
         if (category === 'parçacı') return isParçacı;
         if (category === 'çekici') return isTow;
-
+  
         return false;
       });
-
+  
+      console.log("✅ Filtrelenmiş sonuç sayısı:", filteredResults.length);
+      console.log("📍 İlk konum:", filteredResults[0]?.geometry?.location);
+  
       setPlaces(filteredResults);
+  
+      // Haritayı ilk sonuç konumuna odakla
+      if (filteredResults.length > 0 && mapRef.current) {
+        const first = filteredResults[0].geometry.location;
+      }
+  
     } catch (error) {
       console.error(`❌ Arama hatası (${keyword}):`, error);
     }
   };
+  
 
   useEffect(() => {
     requestLocationPermission();
   }, []);
+
+  const icon = require('../assets/icons/cursor.png');
 
   return (
     <SafeAreaView style={styles.container} edges={['left', 'right']}>
@@ -137,18 +154,19 @@ const HomeScreen = () => {
           provider="google"
           followsUserLocation={true}
           initialRegion={{
-            latitude: 37.78825,
-            longitude: -122.4324,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
+            latitude: 41.005082,
+            longitude: 29.149471,
+            latitudeDelta: 0.01,
+            longitudeDelta: 0.01,
           }}
         >
-          <Marker coordinate={region} anchor={{ x: 0.5, y: 0.5 }}>
-            <Image
-              source={require('../assets/icons/cursor.png')}
-              style={{ width: 150, height: 150, resizeMode: 'contain' }}
-            />
-          </Marker>
+          <Marker 
+            coordinate={{
+              latitude: region.latitude,
+              longitude: region.longitude,
+            }} 
+            anchor={{ x: 0.5, y: 0.5 }}
+            icon={icon} />
 
           {places.map((place, index) => {
             const lat = place.geometry?.location?.lat;
@@ -161,7 +179,7 @@ const HomeScreen = () => {
 
             let icon = require('../assets/icons/shop.png');
             if (isRepair) icon = require('../assets/icons/wrench.png');
-            else if (isTow) icon = require('../assets/icons/tow-truck.png');
+            else if (isTow) icon = require('../assets/icons/tow_truck.png');
 
             return (
               <Marker
@@ -169,12 +187,9 @@ const HomeScreen = () => {
                 coordinate={{ latitude: lat, longitude: lng }}
                 onPress={() => navigation.navigate('Detail', { place })}
                 anchor={{ x: 0.5, y: 0.5 }}
-              >
-                <Image
-                  source={icon}
-                  style={{ width: 150, height: 150, resizeMode: 'contain' }}
-                />
-              </Marker>
+                icon={icon}
+                style={{ width: 10, height: 10 }}
+              />
             );
           })}
         </MapView>

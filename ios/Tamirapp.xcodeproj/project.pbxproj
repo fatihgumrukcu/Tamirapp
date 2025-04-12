@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00D6F15CC97B4622AF72F128 /* wrench.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F00BD7F940B45D8AD3B2F26 /* wrench.png */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		17FCB0FDD85CDA86734CA30B /* libPods-Tamirapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E92D49EB5D1401B9973E2DE7 /* libPods-Tamirapp.a */; };
+		433CBFCB8E754EBBBC3A5A27 /* tow_truck.png in Resources */ = {isa = PBXBuildFile; fileRef = 59155DD554984DBF87395E09 /* tow_truck.png */; };
 		62077EFB3BDA55A57BB80C3D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		AF5A8BE12D9DEA6E0045BB70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5A8BE02D9DEA6E0045BB70 /* Assets.xcassets */; };
 		AF6875AE2D9E95E500C3BA03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6875AD2D9E95E500C3BA03 /* LaunchScreen.storyboard */; };
-		FC034507AC9B4D5998B97F6F /* cursor.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F263818F2C4868AB8B995C /* cursor.png */; };
 		C3344877401B468895159B78 /* shop.png in Resources */ = {isa = PBXBuildFile; fileRef = 98DBE11F4DA944B2A71EF883 /* shop.png */; };
-		433CBFCB8E754EBBBC3A5A27 /* tow_truck.png in Resources */ = {isa = PBXBuildFile; fileRef = 59155DD554984DBF87395E09 /* tow_truck.png */; };
-		00D6F15CC97B4622AF72F128 /* wrench.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F00BD7F940B45D8AD3B2F26 /* wrench.png */; };
+		FC034507AC9B4D5998B97F6F /* cursor.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F263818F2C4868AB8B995C /* cursor.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,16 +25,16 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Tamirapp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tamirapp/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = Tamirapp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		2F00BD7F940B45D8AD3B2F26 /* wrench.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = wrench.png; path = ../src/assets/icons/wrench.png; sourceTree = "<group>"; };
+		59155DD554984DBF87395E09 /* tow_truck.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = tow_truck.png; path = ../src/assets/icons/tow_truck.png; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Tamirapp/AppDelegate.swift; sourceTree = "<group>"; };
+		98DBE11F4DA944B2A71EF883 /* shop.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = shop.png; path = ../src/assets/icons/shop.png; sourceTree = "<group>"; };
 		9F4D18AF936CCB73DA405136 /* Pods-Tamirapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tamirapp.release.xcconfig"; path = "Target Support Files/Pods-Tamirapp/Pods-Tamirapp.release.xcconfig"; sourceTree = "<group>"; };
 		AF5A8BE02D9DEA6E0045BB70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF6875AD2D9E95E500C3BA03 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E92D49EB5D1401B9973E2DE7 /* libPods-Tamirapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tamirapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F9F263818F2C4868AB8B995C /* cursor.png */ = {isa = PBXFileReference; name = "cursor.png"; path = "../src/assets/icons/cursor.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		98DBE11F4DA944B2A71EF883 /* shop.png */ = {isa = PBXFileReference; name = "shop.png"; path = "../src/assets/icons/shop.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		59155DD554984DBF87395E09 /* tow_truck.png */ = {isa = PBXFileReference; name = "tow_truck.png"; path = "../src/assets/icons/tow_truck.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2F00BD7F940B45D8AD3B2F26 /* wrench.png */ = {isa = PBXFileReference; name = "wrench.png"; path = "../src/assets/icons/wrench.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F9F263818F2C4868AB8B995C /* cursor.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = cursor.png; path = ../src/assets/icons/cursor.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,13 +241,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tamirapp/Pods-Tamirapp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tamirapp/Pods-Tamirapp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -262,13 +258,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tamirapp/Pods-Tamirapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tamirapp/Pods-Tamirapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -426,7 +418,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -495,7 +490,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

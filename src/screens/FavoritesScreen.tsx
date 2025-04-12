@@ -81,9 +81,11 @@ const FavoritesScreen = () => {
         showsVerticalScrollIndicator={false}
       />
 
-      <TouchableOpacity style={styles.clearButton} onPress={clearFavorites}>
-        <Text style={styles.clearText}>Favorileri Temizle</Text>
-      </TouchableOpacity>
+      {favorites.length > 0 && (
+        <TouchableOpacity style={styles.clearButton} onPress={clearFavorites}>
+          <Text style={styles.clearText}>Favorileri Temizle</Text>
+        </TouchableOpacity>
+      )}
     </SafeAreaView>
   );
 };
@@ -125,7 +127,8 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Regular',
   },
   clearButton: {
-    marginTop: 20,
+    marginTop: 5,
+    marginBottom: 25,
     paddingVertical: 12,
     backgroundColor: '#ff8200',
     borderRadius: 14,

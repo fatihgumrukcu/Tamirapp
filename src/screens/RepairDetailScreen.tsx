@@ -38,7 +38,7 @@ const RepairDetailScreen = () => {
   const route = useRoute<RouteProp<RouteParams, 'params'>>();
   const place = route.params.place;
 
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState<{ author_name: string; text: string }[]>([]);
   const [phone, setPhone] = useState<string | null>(null);
   const [isFavorite, setIsFavorite] = useState(false);
   const { isDarkMode } = useTheme();
@@ -46,7 +46,8 @@ const RepairDetailScreen = () => {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${place.place_id}&fields=formatted_phone_number,reviews&key=${GOOGLE_API_KEY}`;
+        const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${place.place_id}&fields=formatted_phone_number,reviews&language=tr&key=${GOOGLE_API_KEY}`;
+
         const response = await axios.get(url);
         const result = response.data.result;
         if (result?.formatted_phone_number) setPhone(result.formatted_phone_number);

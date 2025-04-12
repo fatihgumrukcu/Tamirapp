@@ -148,7 +148,7 @@ const HomeScreen = () => {
           ref={mapRef}
           style={styles.map}
           region={region}
-          showsUserLocation={true}
+          showsUserLocation={false}
           mapType={mapType}
           // provider={Platform.OS === 'android' ? PROVIDER_GOOGLE : undefined}
           provider="google"

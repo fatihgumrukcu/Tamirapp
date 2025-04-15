@@ -1,0 +1,1497 @@
+[
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "REDLİNE MOTORSİKLET TAMİRCİSİ ÇEKMEKÖY",
+    "formatted_address": "Hamidiye, Emirhan Sk. no:8/a, 34782 Çekmeköy/İstanbul",
+    "phone": "05412074635",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0233038,
+        "lng": 29.193865
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MotoAK",
+    "formatted_address": "Aşağı Dudullu, Alyıldız Sokağı no:7/a, 34773 Ümraniye/İstanbul",
+    "phone": "05379153353",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 41.0234873,
+        "lng": 29.1678344
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTO ECRİN",
+    "formatted_address": "NECİP FAZIL MAH. SARIGAZİ YOLU CAD, Yiğitler Sk. NO:21/A, 34773 Ümraniye/İstanbul",
+    "phone": "05529281533",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 41.0123137,
+        "lng": 29.1700151
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "HACIPAŞAOĞLU MOTORS",
+    "formatted_address": "Armağanevler Mahallesi Mithatpaşa Caddesi, Sancaktar Sok. No:4/B, 34760 Ümraniye/İstanbul",
+    "phone": "05384773244",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 41.0220194,
+        "lng": 29.1147658
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Speed Motor",
+    "formatted_address": "Çamlık, Şenol Güneş Blv., 34774 Ümraniye/İstanbul",
+    "phone": "02164206047",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 40.9985486,
+        "lng": 29.1230325
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Pusula Motors",
+    "formatted_address": "Huzur, Şener Sk. 28A, 34000 Ümraniye/İstanbul",
+    "phone": "05525846097",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 41.0325086,
+        "lng": 29.1612294
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTOR TAMİRCİSİ",
+    "formatted_address": "Kocasinan Merkez, Sakıp Sabancı Cd. no:32, 34180 Bahçelievler/İstanbul",
+    "phone": "05342648412",
+    "rating": 4.3,
+    "geometry": {
+      "location": {
+        "lat": 41.0168932,
+        "lng": 28.8471939
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motoner - Motosiklet Tamir - Motosiklet Lastik",
+    "formatted_address": "Adem Yavuz, Şehzade Mehmet Cd. No:3/A, 34775 Ümraniye/İstanbul",
+    "phone": "05079078716",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0192434,
+        "lng": 29.1549047
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "7/24 motorsiklet yol yardım",
+    "formatted_address": "Çakmak, İskender Sk. 12a, 34000 Ümraniye/İstanbul",
+    "phone": "05078875702",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0107494,
+        "lng": 29.1294834
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Makro motosiklet",
+    "formatted_address": "Küçükbakkalköy, Başöğretmen Cd No:21, 34758 Ataşehir/İstanbul",
+    "phone": "05079187075",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 40.9809262,
+        "lng": 29.1127004
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Özkaraoğlan Motorsiklet",
+    "formatted_address": "Parseller, Ethem Nejat Cd. No:3 D:A, 34374 Ümraniye/İstanbul",
+    "phone": "05382783403",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 41.02916,
+        "lng": 29.1564632
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Eren motorsiklet ve bisiklet servis tamir",
+    "formatted_address": "Adem Yavuz, 34773 Ümraniye/İstanbul",
+    "phone": "",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0223003,
+        "lng": 29.1545975
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTORX Motosiklet Kiralama ,Bakım Onarımı İstanbul Mecidiyeköy Şişli",
+    "formatted_address": "Gülbahar mah.Salih tozan sokak 5:D, Gülbahar, Salih Tozan Sk. 5d, 34394 Şişli/İstanbul",
+    "phone": "05324722275",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0681968,
+        "lng": 29.0037274
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MSF MOTOSİKLET TAMİR",
+    "formatted_address": "Necip Fazıl, Sultan Veled Sk. 2c, 34000 Ümraniye/İstanbul",
+    "phone": "05362169527",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.017699,
+        "lng": 29.175937
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "GÜNEY MOTOR ATAŞEHİR",
+    "formatted_address": "Kayışdağı, Atilla Cd. No:32, 34755 Ataşehir/İstanbul",
+    "phone": "02165264787",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 40.985968,
+        "lng": 29.143923
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Mit motor",
+    "formatted_address": "Çamlık, İkbal Cd NO:174/A, 34764 Ümraniye/İstanbul",
+    "phone": "05435443475",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 40.9986691,
+        "lng": 29.1234773
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motosiklet ve Bisiklet Tamir Bakım Servisi",
+    "formatted_address": "Ihlamurkuyu, Malazgirt Cd no 36, 34771 Ümraniye/İstanbul",
+    "phone": "05327450567",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 41.023881,
+        "lng": 29.1313627
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "ÜMRANİYE ELEKTRİKLİ MOTOR MOTOSİKLET BİSİKLET SERVİS",
+    "formatted_address": "İnkılap, Yıldırım Cd. NO:15A, 34768 Ümraniye/İstanbul",
+    "phone": "05398127754",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0335371,
+        "lng": 29.1052892
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motosiklet Lastikçisi ve Tamircisi Nurettin MİCHELİN PIRELLİ METZELER ANLAŞ BRIDGESTONE CONTİNENTAL TURUNCU MTS TAKİP SİSTEMi",
+    "formatted_address": "Esentepe, Gazi Osmanpaşa Cd No:67, 34065 Eyüpsultan/İstanbul",
+    "phone": "05534777673",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 41.0717757,
+        "lng": 28.9406667
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Moto servis",
+    "formatted_address": "Ihlamurkuyu, Tecelli Sk. 5 A, 34771 Ümraniye/İstanbul",
+    "phone": "05349272887",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 41.0177071,
+        "lng": 29.1363772
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "EREN MOTOSİKLET-TAMİRCİLİK-YEDEK PARÇA-ÖZEL SERVİS",
+    "formatted_address": "Meclis, Serdar Sk. 14 A, 34887 Sancaktepe/İstanbul",
+    "phone": "05072755437",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0133384,
+        "lng": 29.1993751
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "STATÖR TAMİRİ",
+    "formatted_address": "İçerenköy, Eski Üsküdar Yolu No:51, 34750 Ataşehir/İstanbul",
+    "phone": "05327365892",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 40.979314,
+        "lng": 29.1093201
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Birlik Motosiklet",
+    "formatted_address": "Cemil Meriç, İstiklal Cd. 65A, 34771 Ümraniye/İstanbul",
+    "phone": "05369970637",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 41.0211193,
+        "lng": 29.143278
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTOR TAMİRCİSİ",
+    "formatted_address": "Mehmet Akif, Okay Cd., 34774 Ümraniye/İstanbul",
+    "phone": "05452245719",
+    "rating": 4.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0040802,
+        "lng": 29.1364296
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Moto Mechanıc ve Yol Yardım",
+    "formatted_address": "İstiklal, Mithatpaşa Cd. No:65/A, 34764 Ümraniye/İstanbul",
+    "phone": "05318820000",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.023439,
+        "lng": 29.106022
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Piston Motorsiklet",
+    "formatted_address": "Çakmak, Gurbet Sk. No:71, 34774 Ümraniye/İstanbul",
+    "phone": "05459054414",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0108849,
+        "lng": 29.1274561
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "ATAŞEHIR MOTOR",
+    "formatted_address": "İçerenköy, Şehitler Cami Sk. No:26/A, 34752 Ataşehir/İstanbul",
+    "phone": "05324533248",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 40.9772801,
+        "lng": 29.1093079
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "insaf motosiklet",
+    "formatted_address": "Altınşehir, Menderes Sk. 47/A, 34775 Ümraniye/İstanbul",
+    "phone": "05372198523",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.010587,
+        "lng": 29.142181
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Mekanix Motor Ümraniye / Tamir , Bakım , Yedek Parça ve Aksesuar",
+    "formatted_address": "Kazım Karabekir, Erzurum Cd. No:47/A, 34768 Ümraniye/İstanbul",
+    "phone": "05319623126",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 41.038854,
+        "lng": 29.106653
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Uğur Motor",
+    "formatted_address": "Bulgurlu, Söğütlü Çayır Çeşmesi Sk. No:3, 34696 Üsküdar/İstanbul",
+    "phone": "05317087255",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0167095,
+        "lng": 29.0806899
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motoçağ ÇEKMEKÖY motosiklet tamircisi",
+    "formatted_address": "Hamidiye, Ceylan Sk. no18, 34000 Çekmeköy/İstanbul",
+    "phone": "05550017557",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0276083,
+        "lng": 29.1830143
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "AZ Motosiklet Servisi",
+    "formatted_address": "Namık Kemal, Talatpaşa Cd No:39/B, 34762 Ümraniye/İstanbul",
+    "phone": "05435430244",
+    "rating": 4.3,
+    "geometry": {
+      "location": {
+        "lat": 41.015959,
+        "lng": 29.093844
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MSK MOTOSİKLET",
+    "formatted_address": "Yeni Sahra, Aklale Sk. No:1/b, 34000 Ataşehir/İstanbul",
+    "phone": "05442337655",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 40.9879599,
+        "lng": 29.0897447
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motogar Motosiklet Tamir Hizmetleri",
+    "formatted_address": "Yavuz Sultan Selim, Helvacı Ahmet Sk. No:9 D:A, 34083 Fatih/İstanbul",
+    "phone": "05349661807",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 41.0262077,
+        "lng": 28.9553482
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MotoST",
+    "formatted_address": "Fındıklı, Hancıoğlu Cd. No:83, 34854 Dudullu Osb/Maltepe/İstanbul",
+    "phone": "05426943827",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 40.9694674,
+        "lng": 29.1343099
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Tutku Motor Tamir Bakım Servisi",
+    "formatted_address": "Zafer, Çimen Sk. 33a, 34194 Bahçelievler/İstanbul",
+    "phone": "05434807879",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 40.9956283,
+        "lng": 28.8381959
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "ROTA MOTOSIKLET",
+    "formatted_address": "Armağan Evler Mh. Mithat Paşa Cd. Güngör Sk No:10 Dükkan:1, 34788 Ümraniye/İstanbul",
+    "phone": "05322283747",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0200017,
+        "lng": 29.1194087
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Moto rodaj",
+    "formatted_address": "motorsiklet tamir hanesi, Fındıklı, Çınar Cd. No:1, 34854 Maltepe/İstanbul",
+    "phone": "05401073737",
+    "rating": 4.7,
+    "geometry": {
+      "location": {
+        "lat": 40.9686773,
+        "lng": 29.1396504
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Onur Motor | Motosiklet Tamir | Motosiklet Bakım | Motosiklet Onarım",
+    "formatted_address": "Sultantepe, Selmani Pak Cd. no87A, 34664 Üsküdar/İstanbul",
+    "phone": "05468202451",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 41.0263892,
+        "lng": 29.0224766
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "ÖZDEMİR MOTOR",
+    "formatted_address": "Yukarı Dudullu, Galata Sk. No:19/b, 34773 Dudullu/Ümraniye/Ümraniye/İstanbul",
+    "phone": "05318603408",
+    "rating": 4.4,
+    "geometry": {
+      "location": {
+        "lat": 41.0184232,
+        "lng": 29.1600909
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "2 TEKER GARAJ",
+    "formatted_address": "İnönü, Kayışdağı Cd. 184/2, 34750 Ataşehir/İstanbul",
+    "phone": "05050601976",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 40.9784974,
+        "lng": 29.1344854
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Akyüz Motosiklet Bakım ve Onarım Hizmetleri - Şerif Akyüz",
+    "formatted_address": "Ferah, Mehmet Akif Ersoy Cd. No:226/A, 34682 Üsküdar/İstanbul",
+    "phone": "05369166300",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 41.0384949,
+        "lng": 29.07123
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Tulum motor tamir bakım onarım",
+    "formatted_address": "İnkılap, Kavaklı Sk. No:22B, 34768 Ümraniye/İstanbul",
+    "phone": "05394269005",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 41.041237,
+        "lng": 29.109456
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motosiklet tamircisi / Moto rolisa",
+    "formatted_address": "Yıldıztepe, 30/5. Sk. 10 b, 34000 Bağcılar/İstanbul",
+    "phone": "05455915534",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0281357,
+        "lng": 28.8541484
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Bağcılar Metin Usta Motosiklet Tamiri & 2.El Alım Satım",
+    "formatted_address": "Merkez Mah 677.Sk No:37/B Zemin Kat, 34200 Bağcılar/İstanbul",
+    "phone": "05372509871",
+    "rating": 4.3,
+    "geometry": {
+      "location": {
+        "lat": 41.0297546,
+        "lng": 28.8603261
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "DAĞ MOTOR",
+    "formatted_address": "Namık Kemal,Cengiz Topel Cad, Ilgaz Dağı Sk. No:4 D, 34764 Ümraniye/İstanbul",
+    "phone": "05358168466",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 41.020638,
+        "lng": 29.091773
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTOGZRGARAGE",
+    "formatted_address": "Elmalıkent, Gümüşhane Sk. no14/A, 34764 Ümraniye/İstanbul",
+    "phone": "05536673497",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 41.0347195,
+        "lng": 29.1010659
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "28 EFS@NE MOTOSİKLET",
+    "formatted_address": "İnönü, Sultangazi Cd. NO:6 c, 34785 Sancaktepe/İstanbul",
+    "phone": "05382960764",
+    "rating": 4.3,
+    "geometry": {
+      "location": {
+        "lat": 41.0138994,
+        "lng": 29.2080284
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "ÖzSalgın Motor R.ŞAKİR ÇOBAN",
+    "formatted_address": "Küçükyalı, Atatürk Cd No:46, 34841 Maltepe/İstanbul",
+    "phone": "05426115623",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 40.949363,
+        "lng": 29.118349
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Murat Motor",
+    "formatted_address": "Yamanevler, Ayfer Sokağı 4A, 34768 Ümraniye/İstanbul",
+    "phone": "05354342105",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0264172,
+        "lng": 29.1014059
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motoçet Elite Service",
+    "formatted_address": "Örnek, Yunus Emre Cd, 34732 Ataşehir/İstanbul",
+    "phone": "05399247454",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0009403,
+        "lng": 29.0774901
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Çamlica Motor Ümraniye",
+    "formatted_address": "Yamanevler Mah. Hoş Sk. 3 AA Sondurak Ümraniye İSTANBUL Yamanevler Mah. Hoş Sk. 3 AA Sondurak, 34768 Ümraniye/İstanbul",
+    "phone": "02166344690",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 41.026142,
+        "lng": 29.10098
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motosiklet Tamir",
+    "formatted_address": "Merkez, 34782 Çekmeköy/İstanbul",
+    "phone": "05528793352",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0454681,
+        "lng": 29.1798369
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motomer Motosiklet Servisi",
+    "formatted_address": "Esenkent Mah Barajyolu Cad. Yeni Dünya Sitesi, No: 22C, 34775 Ümraniye/İstanbul",
+    "phone": "05365952760",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 41.0046776,
+        "lng": 29.1713034
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Yaman Motor",
+    "formatted_address": "Mimar Sinan, Yeşil Kayalar Cd. no:1 D:3a, 34000 Çekmeköy/İstanbul",
+    "phone": "",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 41.0292594,
+        "lng": 29.172937
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motosiklet Tamircisi Deniz Motor",
+    "formatted_address": "Yenimahalle mah. Doktor ömer besin paşa caddesi, Cevher Sk. No:25, 34000 Beykoz/İstanbul",
+    "phone": "05364768234",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0687696,
+        "lng": 29.0803768
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motosiklet yol yardım",
+    "formatted_address": "Namık Kemal, Talatpaşa Cd No:39, 34762 Ümraniye/İstanbul",
+    "phone": "05439449936",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 41.0159249,
+        "lng": 29.093935
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "SANATKARLAR Motorsiklet Tamir Onarım Yedek Parça",
+    "formatted_address": "Gazi, 1347. Sk. No:83, 34000 Sultangazi/İstanbul",
+    "phone": "05384554559",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.1034738,
+        "lng": 28.8979378
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "ÜNEN MOTOR'S Motosiklet Yol Yardım Tamir Onarım Bakım",
+    "formatted_address": "İslambey, Tahta Minare Bostan Sokağı No:16, 34400 Eyüpsultan/İstanbul",
+    "phone": "05528798637",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0494292,
+        "lng": 28.9272786
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Uygur Motosiklet Ve Bisiklet Servisi",
+    "formatted_address": "Örnek, Tarçın Sk. no:4, 34704 Ataşehir/İstanbul",
+    "phone": "02163153890",
+    "rating": 4.7,
+    "geometry": {
+      "location": {
+        "lat": 40.996002,
+        "lng": 29.076491
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Moto Serttaş",
+    "formatted_address": "Cevizli, Orhan Gazi Cd. No: 14, 34846 Maltepe/İstanbul",
+    "phone": "05325014710",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 40.9188193,
+        "lng": 29.1462236
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Musa usta motosiklet yol yardım otomobil hafif ticari yol yardım marş dinamosu şarj dinamosu tamiri",
+    "formatted_address": "Merkez, Dudullu OSB, D016, 34782 Çekmeköy/İstanbul",
+    "phone": "05528793352",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0314882,
+        "lng": 29.167863
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motosenkron",
+    "formatted_address": "İçerenköy, Mezarlık Sk. No:16, 34752 Ataşehir/İstanbul",
+    "phone": "05378229531",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 40.9710065,
+        "lng": 29.1085834
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Moto Hub Motosiklet Servis (Tamir Atölyesi)",
+    "formatted_address": "Tepeüstü, Tepeüstü Özgür Sk. no:32/A, 34771 Ümraniye/İstanbul",
+    "phone": "05345223453",
+    "rating": 3.7,
+    "geometry": {
+      "location": {
+        "lat": 41.0185829,
+        "lng": 29.1275533
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Sponsorlu ",
+    "formatted_address": "Yukarı Dudullu, Alemdağ Cd No:756 D:1, 34775 Ümraniye/İstanbul - Asya",
+    "phone": "02165407880",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 41.0163459,
+        "lng": 29.154362
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MotoRed Özel Servis&Yol Yardım",
+    "formatted_address": "Bağlarbaşı cemalbey caddesi 26 motored, 34844 Maltepe/İstanbul",
+    "phone": "05526667634",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 40.921842,
+        "lng": 29.1403635
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTO EM",
+    "formatted_address": "Aydınevler mah. soydan Sk. No: 16 iç kapı no: 3, 34854 Maltepe/İstanbul",
+    "phone": "05524340119",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 40.9490794,
+        "lng": 29.1258669
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Tevhid Motosiklet Tamirhane ve Bakım",
+    "formatted_address": "İstiklal, Efe Sk. No:31, 34764 Ümraniye/İstanbul",
+    "phone": "05070384765",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0231885,
+        "lng": 29.1047317
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTO LILY GARAGE MOTOSİKLET BOYA - GRENAJ TAMiRi - BAKIM",
+    "formatted_address": "Aşıkveysel, 3001. Cd. No:170 D:B, 34457 Ataşehir/İstanbul",
+    "phone": "05466698664",
+    "rating": 4.7,
+    "geometry": {
+      "location": {
+        "lat": 41.0000281,
+        "lng": 29.0905979
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTO WE",
+    "formatted_address": "Ferhatpaşa, 132. Sk. No:8, 34800 Ataşehir/İstanbul",
+    "phone": "05368365038",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 40.9890925,
+        "lng": 29.1774713
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motorize",
+    "formatted_address": "Parseller, Karadeniz Cd. no 120, 34142 Ümraniye/İstanbul",
+    "phone": "05547982084",
+    "rating": 4.4,
+    "geometry": {
+      "location": {
+        "lat": 41.031821,
+        "lng": 29.154421
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "A&H MOTOSİKLET TAMİR BAKIM",
+    "formatted_address": "Eğitim, Halil Bey Sk. No: 14/B, 34722 Kadıköy/İstanbul",
+    "phone": "05550900099",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 40.9921372,
+        "lng": 29.0451452
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Aktaş Motor",
+    "formatted_address": "Adem Yavuz, Alemdağ Cd No:415, 34773 Ümraniye/İstanbul",
+    "phone": "02166113454",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 41.0169211,
+        "lng": 29.1553731
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTOSİKLET YOL YARDIM 7/24 - BAŞKA MOTO",
+    "formatted_address": "Çeliktepe, ŞEHİTKARAKUŞLAR CADDESİ 23/A, 34413 Kağıthane/İstanbul",
+    "phone": "05446152431",
+    "rating": 4.4,
+    "geometry": {
+      "location": {
+        "lat": 41.0870928,
+        "lng": 28.9983931
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Egamotomarket Motosiklet Yedek Parça",
+    "formatted_address": "Yukarı dudullu mahallesi, Tavukçu yolu caddesi, Uğur Sk. No:62, 34773 Dudullu/Ümraniye/İstanbul",
+    "phone": "05551835961",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 41.00503,
+        "lng": 29.1509992
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motosiklet tamircisi zorelgroup filo ve bakım hizmetleri",
+    "formatted_address": "Altayçeşme, Sami Bey Sk. 3B, 34843 Maltepe/İstanbul",
+    "phone": "05520275427",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 40.9337098,
+        "lng": 29.1366852
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "V2 Motor",
+    "formatted_address": "Ören Apt, Site, Diriliş Cd No:68a, 34760 Ümraniye/İstanbul",
+    "phone": "05349157782",
+    "rating": 4.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0131722,
+        "lng": 29.1206559
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Moto Vip - Motor Tamircisi - Motor Kiralama",
+    "formatted_address": "İnönü, 19 Mayıs Cd. no:67, 34755 Ataşehir/İstanbul",
+    "phone": "05396712958",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 40.9763756,
+        "lng": 29.1355636
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "H-B Motor",
+    "formatted_address": "şehit Yurdanur sokak, Çakmak, Tavukçuyolu Cd no:2a, Ümraniye",
+    "phone": "05316257280",
+    "rating": 4.3,
+    "geometry": {
+      "location": {
+        "lat": 41.013695,
+        "lng": 29.1336078
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "İkra Motosiklet servisi",
+    "formatted_address": "İçrenköy mahallesi alanaldı caddesi, Baltacıoğlu Sk. no:2/A, 34700 Ataşehir/İstanbul",
+    "phone": "05436287019",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 40.9649374,
+        "lng": 29.1160423
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "SARSILMAZ MOTOR 7/24 bakım onarım",
+    "formatted_address": "Camiikebir, Hoca Ahmet Sk. 4b, 34421 Beyoğlu/İstanbul",
+    "phone": "05309754563",
+    "rating": 4.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0336309,
+        "lng": 28.9667933
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Anadolu Motor",
+    "formatted_address": "Tepeüstü, Alemdağ Cd No:596 D:1, 34764 Ümraniye/İstanbul",
+    "phone": "05426785254",
+    "rating": 4.4,
+    "geometry": {
+      "location": {
+        "lat": 41.0170936,
+        "lng": 29.1361159
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTOSİKLET YOL YARDIM 7 24 - MOTO DEMİR",
+    "formatted_address": "Gürsel, Şevket Paşa Cd. No:16C, 34000 Kağıthane/İstanbul",
+    "phone": "05011372958",
+    "rating": 4.1,
+    "geometry": {
+      "location": {
+        "lat": 41.0708252,
+        "lng": 28.9772331
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Şaşmaz Moto Garaj, Moto Tamir, Motorsiklet Bakım Onarım",
+    "formatted_address": "Sultantepe, Selmani Pak Cd. no87, 34664 Üsküdar/İstanbul",
+    "phone": "05337668826",
+    "rating": 4.7,
+    "geometry": {
+      "location": {
+        "lat": 41.0263609,
+        "lng": 29.0222241
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTO MOTO",
+    "formatted_address": "Mevlana, Sakarya Cd. NO:96/A, 34779 Ataşehir/İstanbul",
+    "phone": "05557208266",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 40.9862991,
+        "lng": 29.1566968
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Emek motosiklet yolyardım",
+    "formatted_address": "İstanbul Kağıthane Gültepe, Ortabayır, Santral Cd. 19 c, 34000 Kağıthane/İstanbul",
+    "phone": "05050227381",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 41.0774888,
+        "lng": 29.0037056
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Karadeniz Moto61",
+    "formatted_address": "Adem Yavuz, Eski Üsküdar Yolu Cd. No:62 D:B, 34773 Ümraniye/İstanbul",
+    "phone": "05452418561",
+    "rating": 3.7,
+    "geometry": {
+      "location": {
+        "lat": 41.0216634,
+        "lng": 29.1521213
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Gözde motorsiklet tamiri Yolyardım 7/24",
+    "formatted_address": "Kağıthane MH Düz Sokak No4b, 34410 İstanbul",
+    "phone": "05412366258",
+    "rating": 4.3,
+    "geometry": {
+      "location": {
+        "lat": 41.0859751,
+        "lng": 28.9863236
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Master Moto Son Durak",
+    "formatted_address": "İstiklal, Kavaklıdere Cd. 38/A, 34762 Ümraniye/İstanbul",
+    "phone": "05466433826",
+    "rating": 3.4,
+    "geometry": {
+      "location": {
+        "lat": 41.0220303,
+        "lng": 29.0979926
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MotoALF Servis",
+    "formatted_address": "İçerenköy mahallesi Prof. Dr. Necmettin Erbakan caddesi, Akça Sk. 2-4, 34752 Ataşehir/İstanbul",
+    "phone": "05395534663",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 40.9738163,
+        "lng": 29.1196634
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Emaktar motosiklet tamir yol yardım 7/24 hizmetinizde Zeynep mobil",
+    "formatted_address": "Gültepe, Özdeniz Sk 27/b, 34000 Kağıthane/İstanbul",
+    "phone": "05066070701",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0802262,
+        "lng": 28.9992079
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motosiklet Tamirhane Bakım Onarım",
+    "formatted_address": "Mimar Sinan, Selam-ı Ali Efendi Cd. No: 75A, 34674 Üsküdar/İstanbul",
+    "phone": "05431890299",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0238646,
+        "lng": 29.0206764
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "SEVPA (SYM SCOOTER MOTOSİKLET SERVİS VE BAKIM HİZMETLERİ)",
+    "formatted_address": "Barbaros, Gülpınar Sk. No:5, 34746 Ataşehir/İstanbul",
+    "phone": "05375743546",
+    "rating": 4.7,
+    "geometry": {
+      "location": {
+        "lat": 40.9829,
+        "lng": 29.096434
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "BADİ MOTOR",
+    "formatted_address": "Şirintepe, Acıyonca Sokağı No:57, 34000 Kağıthane/İstanbul",
+    "phone": "05051109676",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0883883,
+        "lng": 28.9883444
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Özay Motor Kuba Rks Yetkili Servisi",
+    "formatted_address": "Elmalıkent, Adem Yavuz Cd. No:113, 34764 Ümraniye/İstanbul",
+    "phone": "05326259752",
+    "rating": 4.0,
+    "geometry": {
+      "location": {
+        "lat": 41.041379,
+        "lng": 29.099691
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "ASLAN MOTORSİKLET - KUBA - RKS -- MOTOLÜKS YETKİLİ SERVİSİ",
+    "formatted_address": "ahmet yesevi cad, çağlayan, Sakarya 1 Sk No: 37/A, 34192 Bahçelievler/İstanbul",
+    "phone": "05357679486",
+    "rating": 3.7,
+    "geometry": {
+      "location": {
+        "lat": 41.0019582,
+        "lng": 28.8392324
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Quick Motosiklet",
+    "formatted_address": "Bostancı, Şemsettin Günaltay Cd. No:5A, 34736 Kadıköy/İstanbul",
+    "phone": "05524147239",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 40.9579641,
+        "lng": 29.0966301
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTOSTATION",
+    "formatted_address": "Kayışdağı, Nurettin Sk. No:64, 34640 Ataşehir/İstanbul",
+    "phone": "05451610971",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 40.9843765,
+        "lng": 29.1404983
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Ferah Motor Tamiri & Mobil Servis ve Motosiklet Bakım 7/24",
+    "formatted_address": "Ferah, Çamlıbahçe Sk. no:10, 34692 Üsküdar/İstanbul",
+    "phone": "05355027028",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 41.0323444,
+        "lng": 29.076671
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motoomek motosiklet tamiri yedekparça",
+    "formatted_address": "Gençosman, Aktaran Sk. No3/b, 34000 Güngören/İstanbul",
+    "phone": "05524193425",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 41.0343157,
+        "lng": 28.8719161
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTOCHEF",
+    "formatted_address": "İstiklal, Selvice Sokağı No9 D:G, 34766 Ümraniye/İstanbul",
+    "phone": "05330325575",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0184105,
+        "lng": 29.1003012
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "DARK MOTOR Etkili servis motosiklet",
+    "formatted_address": "Atakent, Burç Cd. No:22, 34000 Ümraniye/İstanbul",
+    "phone": "05528503460",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.020083,
+        "lng": 29.1111296
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "GP Moto Ekspertiz Ümraniye",
+    "formatted_address": "Çamlık, Civan Sk. No: 80/B, 34764 Ümraniye/İstanbul",
+    "phone": "05317303951",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 40.9990137,
+        "lng": 29.1253875
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Mototriple",
+    "formatted_address": "İdealtepe, Tayfur Sk. No:1, 34000 Maltepe/İstanbul",
+    "phone": "02163885788",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 40.9438678,
+        "lng": 29.1275172
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Giz Motor Motosiklet Yol Yardım",
+    "formatted_address": "Armağanevler, Mithatpaşa Cad. Havuz Sk No:7/A, 34760 Ümraniye/İstanbul",
+    "phone": "05052667102",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.021185,
+        "lng": 29.1149954
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "GÖKAY MOTOR YETKİLİ SERVİS CF MOTO, MONDİAL, TVS, BAJAJ VE KANUNİ YEDEK PARÇA",
+    "formatted_address": "Yamanevler, Düz Sk. NO:55/A, 34791 Ümraniye/İstanbul",
+    "phone": "05343509810",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 41.0292047,
+        "lng": 29.1001383
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Poyraz motor motosiklet tamir bakım onarım",
+    "formatted_address": "Aşağı Dudullu, Şahinler Cd. No:3, 34000 Ümraniye/İstanbul",
+    "phone": "05316054419",
+    "rating": null,
+    "geometry": {
+      "location": {
+        "lat": 41.018632,
+        "lng": 29.1669232
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "ÇAKIL MOTOSİKLET",
+    "formatted_address": "Fındıklı, Başıbüyük Yolu Cd 7/B, 34000 Maltepe/İstanbul",
+    "phone": "05421262409",
+    "rating": 3.5,
+    "geometry": {
+      "location": {
+        "lat": 40.9684223,
+        "lng": 29.1238723
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Efe Nur Moto çin malı tamiri yoktur",
+    "formatted_address": "Merdivenköy Hızırbey Cad &, Nesrin Sk. No:7 D:E, 34732 Kadıköy/İstanbul",
+    "phone": "05417345900",
+    "rating": 4.1,
+    "geometry": {
+      "location": {
+        "lat": 40.9856844,
+        "lng": 29.0632874
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "MOTORSİKLET ACİL YOL YARDIM VE BAKIM",
+    "formatted_address": "",
+    "phone": "05309926258",
+    "rating": null,
+    "geometry": {
+      "location": {
+        "lat": 41.0268524,
+        "lng": 28.8504908
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Moto Speed",
+    "formatted_address": "Aşağı Dudullu, Hamza Yerlikaya Blv. 5/1, 34773 Ümraniye/İstanbul",
+    "phone": "05379153353",
+    "rating": 3.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0188702,
+        "lng": 29.1678079
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Motosiklet Kiralama Merkezi Olarak",
+    "formatted_address": "Yeni Çamlıca, Emirler Cd. No:10, 34779 Ataşehir/İstanbul",
+    "phone": "",
+    "rating": 3.8,
+    "geometry": {
+      "location": {
+        "lat": 40.9913039,
+        "lng": 29.1627198
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Ose Motor Aksesuar & Yedek Parça",
+    "formatted_address": "İstiklal, Bahçe Sk. No13/A, 34762 Ümraniye/İstanbul",
+    "phone": "05345666478",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 41.012067,
+        "lng": 29.100415
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Yusuf Sarı Motorsiklet Bakım Servisi",
+    "formatted_address": "Eğitim, 34722 Kadıköy",
+    "phone": "05357223674",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 40.9914175,
+        "lng": 29.0406991
+      }
+    }
+  },
+  {
+    "query_name": "motosiklet tamirci",
+    "found_name": "Rem Motorsiklet",
+    "formatted_address": "Ahmediye Necmettin, Necmeddin Okyay Sk. No:9/1, 34668 Üsküdar/İstanbul",
+    "phone": "05366622552",
+    "rating": 4.4,
+    "geometry": {
+      "location": {
+        "lat": 41.0197601,
+        "lng": 29.0180897
+      }
+    }
+  }
+]

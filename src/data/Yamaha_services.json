@@ -1,0 +1,106 @@
+[
+  {
+    "query_name": "Yamaha Yetkili Servis",
+    "found_name": "Yamaha Daytona Motor Bomonti",
+    "formatted_address": "Paşa, Hasret Cd No:53, 34379 Şişli/İstanbul",
+    "phone": "02122656065",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 41.0543755,
+        "lng": 28.9711764
+      }
+    }
+  },
+  {
+    "query_name": "Yamaha Yetkili Servis",
+    "found_name": "Yamaha Ersoy",
+    "formatted_address": "Hasanpaşa, Uzunçayır Cd. NO: 45 D:1A, 34722 Kadıköy/İstanbul",
+    "phone": "02163487272",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 40.9979878,
+        "lng": 29.0492781
+      }
+    }
+  },
+  {
+    "query_name": "Yamaha Yetkili Servis",
+    "found_name": "More Team",
+    "formatted_address": "Orta, Yalnız Selvi Cd. No:17/B, 34880 Kartal/İstanbul",
+    "phone": "4448554",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 40.9129746,
+        "lng": 29.2087848
+      }
+    }
+  },
+  {
+    "query_name": "Yamaha Yetkili Servis",
+    "found_name": "Premium Motosiklet",
+    "formatted_address": "Muratpaşa, Uluyol Cd. No:31, 34040 Bayrampaşa/İstanbul",
+    "phone": "02125354027",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 41.0507882,
+        "lng": 28.9112432
+      }
+    }
+  },
+  {
+    "query_name": "Yamaha Yetkili Servis",
+    "found_name": "Tuna Otomotiv",
+    "formatted_address": "Zümrütevler, Nazmi İlker Sk. No:8, 34852 Maltepe/İstanbul",
+    "phone": "02164417242",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 40.9368235,
+        "lng": 29.1415726
+      }
+    }
+  },
+  {
+    "query_name": "Yamaha Yetkili Servis",
+    "found_name": "Yamaha Yıldız Motosiklet",
+    "formatted_address": "Kazım Karabekir, Adem Yavuz Cd. No:54 D:1A, 34766 Ümraniye/İstanbul",
+    "phone": "02166320444",
+    "rating": 3.9,
+    "geometry": {
+      "location": {
+        "lat": 41.0356576,
+        "lng": 29.1021461
+      }
+    }
+  },
+  {
+    "query_name": "Yamaha Yetkili Servis",
+    "found_name": "Yamaha Mototaş Ataşehir",
+    "formatted_address": "Küçükbakkalköy, Ayşe Hatun Çeşme Sk. No:8, 34750 Ataşehir/İstanbul",
+    "phone": "02165753333",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 40.98,
+        "lng": 28.9621934
+      }
+    }
+  },
+  {
+    "query_name": "Yamaha Yetkili Servis",
+    "found_name": "Yamaha İstanbul Motosiklet",
+    "formatted_address": "Turgut Özal Mah 68. Sok. Otoport AVM D:46/14, 34540, 34513 Esenyurt/İstanbul",
+    "phone": "08506020707",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0347396,
+        "lng": 28.6233394
+      }
+    }
+  }
+]

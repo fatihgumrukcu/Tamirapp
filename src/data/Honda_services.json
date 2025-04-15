@@ -1,0 +1,158 @@
+[
+  {
+    "query_name": "Honda Motosiklet Anes",
+    "found_name": "Honda Motosiklet Anes",
+    "formatted_address": "Yenibosna Merkez, Anes Motor - Honda Motosiklet Showroom Basın Ekspres, Cemal Ulusoy Cd. No:25, 34197 Bahçelievler/İstanbul",
+    "phone": "444 4 859",
+    "rating": 3.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0178306,
+        "lng": 28.8116457
+      }
+    }
+  },
+  {
+    "query_name": "Honda Motosiklet Nish",
+    "found_name": "Honda Motosiklet Nish",
+    "formatted_address": "Yenimahalle, Aksu Cd. No:119/B, 34142 Bakırköy/İstanbul",
+    "phone": "02125700202",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 40.9805671,
+        "lng": 28.8845785
+      }
+    }
+  },
+  {
+    "query_name": "Honda Motosiklet Marmara",
+    "found_name": "Honda Motosiklet Marmara",
+    "formatted_address": "Yakuplu Mah. Sanayi Cd, Haramidere Sanayi Sitesi No:1/B, 34524 Beylikdüzü/İstanbul",
+    "phone": "02124565858",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0042498,
+        "lng": 28.6839114
+      }
+    }
+  },
+  {
+    "query_name": "Honda Motosiklet Alp",
+    "found_name": "Honda Motosiklet Alp",
+    "formatted_address": "Yeni Mahalle, 547/1. Sk. No:1, 34255 Gaziosmanpaşa/İstanbul",
+    "phone": "02122168484",
+    "rating": 4.4,
+    "geometry": {
+      "location": {
+        "lat": 41.0804798,
+        "lng": 28.9068291
+      }
+    }
+  },
+  {
+    "query_name": "Honda Motosiklet Esengül",
+    "found_name": "Honda Motosiklet Esengül",
+    "formatted_address": "Mahmut Şevket Paşa, Odesa Blv. No:22, 34384 Şişli/İstanbul",
+    "phone": "02123208080",
+    "rating": 4.4,
+    "geometry": {
+      "location": {
+        "lat": 41.0558556,
+        "lng": 28.9661073
+      }
+    }
+  },
+  {
+    "query_name": "Honda Motosiklet Pazarbaşı",
+    "found_name": "Honda Motosiklet Pazarbaşı",
+    "formatted_address": "Yeniköy, Köybaşı Cd. 186/A, 34464 Sarıyer/İstanbul",
+    "phone": "02122233534",
+    "rating": 4.4,
+    "geometry": {
+      "location": {
+        "lat": 41.1159265,
+        "lng": 29.0625416
+      }
+    }
+  },
+  {
+    "query_name": "DRD Motorbikes Honda Ataşehir",
+    "found_name": "DRD Motorbikes Honda Ataşehir",
+    "formatted_address": "Barbaros Mh. Kızıl Begonya Sk. Teknik Yapı Deluxia Palace G1 Batı Ataşehir, 34746 Ataşehir/İstanbul",
+    "phone": "08504607400",
+    "rating": 4.3,
+    "geometry": {
+      "location": {
+        "lat": 40.9946975,
+        "lng": 29.0992834
+      }
+    }
+  },
+  {
+    "query_name": "Honda Motosiklet DRD - Hasanpaşa",
+    "found_name": "Honda Motosiklet DRD - Hasanpaşa",
+    "formatted_address": "Eğitim Mahallesi, Poyraz Sok. Sadıkoğlu İş Merkezi D:3 No:28/a, 34722 Kadıköy/İstanbul",
+    "phone": "08504607404",
+    "rating": 4.0,
+    "geometry": {
+      "location": {
+        "lat": 40.9916378,
+        "lng": 29.0412802
+      }
+    }
+  },
+  {
+    "query_name": "Honda Motosiklet Mutluhan",
+    "found_name": "Sonuçlar",
+    "formatted_address": "E-5 Kasacılar Mevki, Altayçeşme, İstiklal Cd. No:120, 34843 Maltepe/İstanbul",
+    "phone": "02164595858",
+    "rating": 3.8,
+    "geometry": {
+      "location": {
+        "lat": 40.942037,
+        "lng": 29.1304924
+      }
+    }
+  },
+  {
+    "query_name": "Honda Motosiklet Konşuk",
+    "found_name": "Honda Motosiklet Konşuk",
+    "formatted_address": "Cevizli, Tugay Yolu Cd. No:55, 34846 Maltepe/İstanbul",
+    "phone": "02164412929",
+    "rating": 4.4,
+    "geometry": {
+      "location": {
+        "lat": 40.9171176,
+        "lng": 29.1576739
+      }
+    }
+  },
+  {
+    "query_name": "DOĞU VE BATI MOTORLU TAŞITLAR (D&B MOTOR)",
+    "found_name": "DOĞU VE BATI MOTORLU TAŞITLAR (D&B MOTOR)",
+    "formatted_address": "İnkılap Mahallesi Küçüksu Cad Süzer Sokak No:1 Akyaka AVM karşısı, 34768 Ümraniye/İstanbul",
+    "phone": "02164610606",
+    "rating": 4.1,
+    "geometry": {
+      "location": {
+        "lat": 41.0346636,
+        "lng": 29.1112418
+      }
+    }
+  },
+  {
+    "query_name": "Honda Motosiklet Ayışığı",
+    "found_name": "Honda Plaza Ayışığı",
+    "formatted_address": "Altunizade, Kısıklı Cd. No:17, 34662 Üsküdar/İstanbul",
+    "phone": "02165590500",
+    "rating": 4.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0237824,
+        "lng": 29.0408242
+      }
+    }
+  }
+]

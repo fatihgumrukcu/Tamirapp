@@ -1,0 +1,691 @@
+[
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "ARD MOTOSİKLET ÜMRANİYE YEDEK PARÇA VE AKSESUAR",
+    "formatted_address": "İstiklal, Mithatpaşa Cd. No:36, 34762 Ümraniye/İstanbul",
+    "phone": "05077907696",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 41.0234219,
+        "lng": 29.1022413
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "MotoSpartan Ihlamurkuyu Motosiklet Yedek Parça & Giyim Ve Aksesuarları",
+    "formatted_address": "Altınşehir, Nato Yolu Cd NO:8A, 34775 Ümraniye/İstanbul",
+    "phone": "02168070555",
+    "rating": 4.4,
+    "geometry": {
+      "location": {
+        "lat": 41.0162347,
+        "lng": 29.1399855
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Aktaş Motor",
+    "formatted_address": "Adem Yavuz, Alemdağ Cd No:415, 34773 Ümraniye/İstanbul",
+    "phone": "02166113454",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 41.0169211,
+        "lng": 29.1553731
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Moto Güven | Motosiklet Yedek Parça ve Aksesuarları",
+    "formatted_address": "Yahya Kemal, Talatpaşa Cd. No:339, 34410 Kağıthane/İstanbul",
+    "phone": "02122837754",
+    "rating": 4.3,
+    "geometry": {
+      "location": {
+        "lat": 41.082591,
+        "lng": 28.9898737
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Ose Motor Aksesuar & Yedek Parça",
+    "formatted_address": "İstiklal, Bahçe Sk. No13/A, 34762 Ümraniye/İstanbul",
+    "phone": "05345666478",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 41.012067,
+        "lng": 29.100415
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Gala Motor | Motorsiklet Yedek Parça Aksesuar",
+    "formatted_address": "Telsizler, Galata Deresi Cd. No: 76/B, 34000 Kağıthane/İstanbul",
+    "phone": "05532385948",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 41.0766793,
+        "lng": 28.9952341
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Egamotomarket Motosiklet Yedek Parça",
+    "formatted_address": "Yukarı dudullu mahallesi, Tavukçu yolu caddesi, Uğur Sk. No:62, 34773 Dudullu/Ümraniye/İstanbul",
+    "phone": "05551835961",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 41.00503,
+        "lng": 29.1509992
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "AYT Motosiklet Yedek Parça Aksesuar",
+    "formatted_address": "İçerenköy, Prof. Dr. Necmettin Erbakan Cd No:68, 34752 Ataşehir/İstanbul",
+    "phone": "02165766676",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 40.9747501,
+        "lng": 29.1215235
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Merkez Yedek Parça",
+    "formatted_address": "Mecidiyeköy, Ömür Sk. No:10, 34387 Şişli/İstanbul",
+    "phone": "02122724983",
+    "rating": 4.7,
+    "geometry": {
+      "location": {
+        "lat": 41.067879,
+        "lng": 28.991546
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Kastel Motor Motosiklet Yedek Parça & Aksesuar Satış",
+    "formatted_address": "Gülbahar, Cemal Sururi Sk. No: 41/A, 34394 Şişli/İstanbul",
+    "phone": "02125320261",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 41.0721364,
+        "lng": 29.0008453
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "MT Bisiklet Motorsiklet Yedek Parça",
+    "formatted_address": "40, İçerenköy, Küçükbakkalköy Yolu Cd., 34752 Ataşehir/İstanbul",
+    "phone": "02165772373",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 40.974022,
+        "lng": 29.111206
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Şahin Motosiklet Çekmeköy Yedek Parça",
+    "formatted_address": "Madenler, Arafat Cd. no:20, 34776 Çekmeköy/İstanbul",
+    "phone": "05375743700",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 41.0116,
+        "lng": 29.1907787
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "MotoSpartan Ümraniye Motosiklet Yedek Parça & Giyim Ve Aksesuarları",
+    "formatted_address": "İnkılap, Küçüksu Cd. No : 129A, 34768 Ümraniye/İstanbul",
+    "phone": "02168070555",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 41.0356838,
+        "lng": 29.1119621
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "MOTO MOTO",
+    "formatted_address": "Mevlana, Sakarya Cd. NO:96/A, 34779 Ataşehir/İstanbul",
+    "phone": "05557208266",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 40.9862991,
+        "lng": 29.1566968
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Motospartan İki Tekerlekli Araçlar A.Ş.",
+    "formatted_address": "Sadıkoğlu Plaza:1 No:10A, Eğitim, Ahsen Çk Sk, 34722 Kadıköy/İstanbul",
+    "phone": "02168070555",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 40.9926131,
+        "lng": 29.0406119
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Soydaş Motosiklet Aksesuar & Ekipman ve Yedek Parça",
+    "formatted_address": "Ihlamurkuyu, Petrol Yolu Cd. No:42, 34771 Ümraniye/İstanbul",
+    "phone": "05058492724",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0195943,
+        "lng": 29.1348313
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Motosiklet Yedek Parça ve Motosiklet Tamircisi - Kask - Mont ve Aksesuar Çeşitleri",
+    "formatted_address": "Dükkan Motosiklet Garajı, Mecidiyeköy, Kısmet Sokağı No:11, 34388 Şişli/İstanbul",
+    "phone": "02129821629",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 41.0714478,
+        "lng": 28.9928422
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "YEŞİLIRMAK MOTOR",
+    "formatted_address": "Battalgazi Mahallesi, Yunus Emre Caddesi, Kuşak Sk. No:2, 34935 Sultanbeyli/İstanbul",
+    "phone": "08506063455",
+    "rating": 3.8,
+    "geometry": {
+      "location": {
+        "lat": 40.9767407,
+        "lng": 29.2682815
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "MOTO NEO",
+    "formatted_address": "toğan apart, Atakent, Alemdağ Cd No:334 D:a, 34764 Ümraniye/İstanbul",
+    "phone": "05319185713",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 41.0237164,
+        "lng": 29.1103328
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Yepar Motor Yedek Parça",
+    "formatted_address": "Sultan Selim, Basamak Sk. No:5/C, 34418 Kağıthane/İstanbul",
+    "phone": "05442809291",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 41.0903548,
+        "lng": 28.9989756
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Koçtaş",
+    "formatted_address": "İnkılap Mah. Küçüksu Cad. Akyaka Park AVM, 34768 Ümraniye/İstanbul",
+    "phone": "02162274004",
+    "rating": 3.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0339452,
+        "lng": 29.1127256
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "İKON MOTOR Mitas GP kompozit SHAD KAPPA GIVI Nukrotech KN MASTER KAAN Motosiklet Aksesuar Lastik Yedekparça EKSPERTİZ",
+    "formatted_address": "Meclis Mahallesi Leylak Sokak No:34/36A Sancaktepe, Dudullu OSB, 34785 Ümraniye/İstanbul",
+    "phone": "05302299977",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.010534,
+        "lng": 29.2065878
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "HACIPAŞAOĞLU MOTORS",
+    "formatted_address": "Armağanevler Mahallesi Mithatpaşa Caddesi, Sancaktar Sok. No:4/B, 34760 Ümraniye/İstanbul",
+    "phone": "05384773244",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 41.0220194,
+        "lng": 29.1147658
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Demirtaş motosiklet yedek parça",
+    "formatted_address": "Demirtaş motosiklet, Ihlamurkuyu, Canakkale Cd No:20, 34771 Ümraniye/İstanbul",
+    "phone": "05307171977",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0221539,
+        "lng": 29.1328755
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Avrasya Motosiklet",
+    "formatted_address": "Çakmak, Çakmak Cami Sk. 18/B, 34764 Ümraniye/İstanbul",
+    "phone": "05519636280",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0200378,
+        "lng": 29.1254797
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "MOTOPAR MOTOSİKLET YEDEK PARÇA & AKSESUAR",
+    "formatted_address": "İstiklal, Kavaklıdere Cd. No: 56/A, 34764 Ümraniye/İstanbul",
+    "phone": "02165214596",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0213934,
+        "lng": 29.0980648
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Moto servis",
+    "formatted_address": "Ihlamurkuyu, Tecelli Sk. 5 A, 34771 Ümraniye/İstanbul",
+    "phone": "05349272887",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 41.0177071,
+        "lng": 29.1363772
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Motopars MotosikletAksesuarlari.com",
+    "formatted_address": "İçerenköy, Kara Kartal Sok. No:1/A, 34752 Ataşehir/İstanbul",
+    "phone": "02165766686",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 40.966793,
+        "lng": 29.1058892
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "TMS MOTORLU ARAÇLAR",
+    "formatted_address": "Mavi Plaza, Eğitim, Asil Sk. NO:1/B, 34772 Kadıköy/İstanbul",
+    "phone": "05444619463",
+    "rating": 4.9,
+    "geometry": {
+      "location": {
+        "lat": 40.9924022,
+        "lng": 29.041864
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Smart Moto Motosiklet Yedek Parça Hizmetleri",
+    "formatted_address": "Battalgazi, Kubbe Cd. No:6, 34935 Sultanbeyli/İstanbul",
+    "phone": "",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 40.9829086,
+        "lng": 29.2683255
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Motoçet Elite Service",
+    "formatted_address": "Örnek, Yunus Emre Cd, 34732 Ataşehir/İstanbul",
+    "phone": "05399247454",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.0009403,
+        "lng": 29.0774901
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Demirtaş Motosiklet",
+    "formatted_address": "Gayrettepe, Balmumcu Deresi Sokağı No:42/B, 34349 Beşiktaş/İstanbul",
+    "phone": "02123277283",
+    "rating": 4.3,
+    "geometry": {
+      "location": {
+        "lat": 41.0598721,
+        "lng": 29.0080608
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "MSF MOTOSİKLET TAMİR",
+    "formatted_address": "Necip Fazıl, Sultan Veled Sk. 2c, 34000 Ümraniye/İstanbul",
+    "phone": "05362169527",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.017699,
+        "lng": 29.175937
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "28 EFS@NE MOTOSİKLET",
+    "formatted_address": "İnönü, Sultangazi Cd. NO:6 c, 34785 Sancaktepe/İstanbul",
+    "phone": "05382960764",
+    "rating": 4.3,
+    "geometry": {
+      "location": {
+        "lat": 41.0138994,
+        "lng": 29.2080284
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "MOTOR İÇİN HERŞEY",
+    "formatted_address": "zühtüpaşa mah kördere sok/b1 kadıköy, 34700 Kadıköy/İstanbul",
+    "phone": "05510604968",
+    "rating": 3.8,
+    "geometry": {
+      "location": {
+        "lat": 40.9857973,
+        "lng": 29.0386042
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Satış & Servis Yedek Parça",
+    "formatted_address": "İçerenköy, Büyük Kartal Sok. 6/1, 34752 Ataşehir/İstanbul",
+    "phone": "02165773490",
+    "rating": 3.1,
+    "geometry": {
+      "location": {
+        "lat": 40.966511,
+        "lng": 29.105818
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Vega Motor",
+    "formatted_address": "Eğitim, Adım Sokağı, 34722 Kadıköy/İstanbul",
+    "phone": "",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 40.9927596,
+        "lng": 29.0421099
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Nukrotech Motosiklet Aksesuarları",
+    "formatted_address": "Halil Rıfat Paşa Mah. Dereboyu1 Sok. No:20/1 Şişli İstanbul Mağaza girişi arka sokaktandır. Köşedeki Michelin lastikçinin yanından girin, 34384 Şişli/İstanbul",
+    "phone": "08503035354",
+    "rating": 4.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0579615,
+        "lng": 28.9715583
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Motosiklet Ekspertiz Garajı | Honda - Yamaha -Suzuki - Kawasaki Ekspertiz",
+    "formatted_address": "Mecidiyeköy, Kısmet Sokağı No:2, 34345 Şişli/İstanbul",
+    "phone": "08502421629",
+    "rating": 4.4,
+    "geometry": {
+      "location": {
+        "lat": 41.0710873,
+        "lng": 28.993108
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "GÜNEY MOTOR ATAŞEHİR",
+    "formatted_address": "Kayışdağı, Atilla Cd. No:32, 34755 Ataşehir/İstanbul",
+    "phone": "02165264787",
+    "rating": 4.5,
+    "geometry": {
+      "location": {
+        "lat": 40.985968,
+        "lng": 29.143923
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "AKK MOTOR",
+    "formatted_address": "Adem Yavuz, Bozkır Sk. no:4, 34774 Ümraniye/İstanbul",
+    "phone": "05465889798",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0233629,
+        "lng": 29.1553648
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Dayko Moto Motosiklet Yedek Parça & Aksesuar",
+    "formatted_address": "Osmangazi, Mertler Cd. No:24 D:B, 34887 Sancaktepe/İstanbul",
+    "phone": "05011355257",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 40.9833165,
+        "lng": 29.2488993
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Motoreim | Toptan ve Perakende Motorsiklet Aksesuarları",
+    "formatted_address": "Yenidoğan, Akın Cd. NO:65/B, 34000 Sancaktepe/İstanbul",
+    "phone": "05332235303",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.010322,
+        "lng": 29.235827
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Moto Alfa | Abush Yetkili Servisi - Honda - Yamaha - Kawasaki",
+    "formatted_address": "Gültepe, Galata Deresi Cd. No:98, 34381 Kağıthane/İstanbul",
+    "phone": "02122178880",
+    "rating": 4.2,
+    "geometry": {
+      "location": {
+        "lat": 41.0767604,
+        "lng": 28.9931748
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Motobir Motosiklet Yedek Parça, Aksesuar",
+    "formatted_address": "Atatürk, Kartal Sk. No:15/A, 34000 Ümraniye/İstanbul",
+    "phone": "05303281795",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0287949,
+        "lng": 29.0959763
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "GAZİANTEP MOTOR RKS KUBA BENNELİ SEGWAY RMG MOTOLUX YETKİLİ SERVİS",
+    "formatted_address": "İçerenköy, Kavaklar Sk No:2, 34752 Ataşehir/İstanbul",
+    "phone": "05384889161",
+    "rating": 3.2,
+    "geometry": {
+      "location": {
+        "lat": 40.9714177,
+        "lng": 29.1183342
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "ANL Motosiklet Yedek Parça",
+    "formatted_address": "Namık kemal mahallesi talatpaşa caddesi, Kuyulu Sk. no:25, 34762 Ümraniye/İstanbul",
+    "phone": "05315733616",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0181313,
+        "lng": 29.0910254
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Mirada Motor Ümraniye",
+    "formatted_address": "Atakent, Alemdağ Cd No:376 D:B, 34760 Ümraniye/İstanbul",
+    "phone": "05543472473",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0228229,
+        "lng": 29.1131732
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Motoçağ ÇEKMEKÖY motosiklet tamircisi",
+    "formatted_address": "Hamidiye, Ceylan Sk. no18, 34000 Çekmeköy/İstanbul",
+    "phone": "05550017557",
+    "rating": 5.0,
+    "geometry": {
+      "location": {
+        "lat": 41.0276083,
+        "lng": 29.1830143
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Atacan Motor",
+    "formatted_address": "Dikilitaş, Emirhan Cd. no:38A, 34349 Beşiktaş/İstanbul",
+    "phone": "05323547567",
+    "rating": 4.6,
+    "geometry": {
+      "location": {
+        "lat": 41.054523,
+        "lng": 29.00236
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "MOTOZIRVE",
+    "formatted_address": "İnkılap, Yelkenciler Sk No:6 D:8, 34766 Ümraniye/İstanbul",
+    "phone": "05324755030",
+    "rating": 4.7,
+    "geometry": {
+      "location": {
+        "lat": 41.0298282,
+        "lng": 29.1050567
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "MOTO HARUN (Aksesuar, yedek parca, 2. el motosiklet)",
+    "formatted_address": "Çağlayan, Bozdemir Sk. No:2, 34403 Kağıthane/İstanbul",
+    "phone": "05363822343",
+    "rating": 4.8,
+    "geometry": {
+      "location": {
+        "lat": 41.0797441,
+        "lng": 28.983329
+      }
+    }
+  },
+  {
+    "query_name": "Yedek Parcacılar",
+    "found_name": "Teknik Moto Yedek Parça Tic. A. Ş.",
+    "formatted_address": "Eğitim, Adım Sokağı İstanbul Plaza no:1315D, 34722 Kadıköy/İstanbul",
+    "phone": "05335489094",
+    "rating": 4.4,
+    "geometry": {
+      "location": {
+        "lat": 40.9931828,
+        "lng": 29.0418519
+      }
+    }
+  }
+]

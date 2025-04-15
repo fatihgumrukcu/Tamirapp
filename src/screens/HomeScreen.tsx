@@ -19,14 +19,25 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 const GOOGLE_API_KEY = 'AIzaSyAhX_qab75bK7JSEhHxnTHh9E32jpoO9YI';
 
+const normalizeText = (text: string) =>
+  text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/ç/g, 'c')
+    .replace(/ğ/g, 'g')
+    .replace(/ı/g, 'i')
+    .replace(/ö/g, 'o')
+    .replace(/ş/g, 's')
+    .replace(/ü/g, 'u');
+
 const HomeScreen = () => {
   const [region, setRegion] = useState<Region | null>(null);
   const [places, setPlaces] = useState<any[]>([]);
   const [mapType, setMapType] = useState<MapType>('standard');
-  const [mapTypeMenuVisible, setMapTypeMenuVisible] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [filterVisible, setFilterVisible] = useState(false);
   const mapRef = useRef<MapView | null>(null);
-
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const requestLocationPermission = async () => {
@@ -42,23 +53,15 @@ const HomeScreen = () => {
             buttonPositive: 'Tamam',
           }
         );
-        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-          console.log(' Konum izni verildi');
-          getCurrentLocation();
-        } else {
-          console.log(' Konum izni reddedildi');
-        }
+        if (granted === PermissionsAndroid.RESULTS.GRANTED) getCurrentLocation();
+        else console.log('Konum izni reddedildi');
       } catch (err) {
         console.warn(err);
       }
     } else {
       const auth = await Geolocation.requestAuthorization('whenInUse');
-      if (auth === 'granted') {
-        console.log('✅ iOS: Konum izni verildi');
-        getCurrentLocation();
-      } else {
-        console.log('❌ iOS: Konum izni reddedildi');
-      }
+      if (auth === 'granted') getCurrentLocation();
+      else console.log('❌ iOS: Konum izni reddedildi');
     }
   };
 
@@ -67,19 +70,15 @@ const HomeScreen = () => {
       position => {
         const { latitude, longitude } = position.coords;
         const newRegion = {
-          latitude: latitude,
-          longitude: longitude,
+          latitude,
+          longitude,
           latitudeDelta: 0.01,
           longitudeDelta: 0.01,
         };
         setRegion(newRegion);
-        if (mapRef.current) {
-          mapRef.current.animateToRegion(newRegion, 1000);
-        }
+        mapRef.current?.animateToRegion(newRegion, 1000);
       },
-      (error) => {
-        console.log('🚫 Konum alınamadı:', error);
-      },
+      error => console.log('Konum alınamadı:', error),
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
     );
   };
@@ -90,34 +89,34 @@ const HomeScreen = () => {
 
     const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${encodeURIComponent(
       keyword
-    )}&location=${region.latitude},${region.longitude}&radius=5000&key=${GOOGLE_API_KEY}`;
+    )}&location=${region.latitude},${region.longitude}&radius=3000&key=${GOOGLE_API_KEY}`;
 
     try {
       const response = await axios.get(url);
       const results = response.data.results || [];
 
       const filteredResults = results.filter((place: any) => {
-        const name = place.name?.toLowerCase() || '';
+        const name = normalizeText(place.name || '');
         const types = place.types || [];
 
         const isTamirci =
-          (name.includes('tamir') || name.includes('servis')) &&
-          !name.includes('parça') &&
+          name.includes('tamir') &&
+          !name.includes('parca') &&
           (types.includes('car_repair') || types.includes('car_service'));
 
-        const isParçacı =
-          (name.includes('parça') || name.includes('yedek')) &&
+        const isParcaci =
+          name.includes('parca') &&
           !name.includes('tamir') &&
           (types.includes('store') || types.includes('car_parts'));
 
-        const isTow =
-          (name.includes('çekici') || types.includes('car_towing')) &&
+        const isCekici =
+          name.includes('cekici') &&
           !name.includes('tamir') &&
-          !name.includes('parça');
+          !name.includes('parca');
 
         if (category === 'tamirci') return isTamirci;
-        if (category === 'parçacı') return isParçacı;
-        if (category === 'çekici') return isTow;
+        if (category === 'parçacı') return isParcaci;
+        if (category === 'çekici') return isCekici;
 
         return false;
       });
@@ -138,15 +137,13 @@ const HomeScreen = () => {
     const coord = { latitude: region.latitude, longitude: region.longitude };
     const icon = require('../assets/icons/cursor.png');
 
-    if (Platform.OS === 'android') {
-      return <Marker coordinate={coord} icon={icon} anchor={{ x: 0.5, y: 0.5 }} />;
-    } else {
-      return (
-        <Marker coordinate={coord} anchor={{ x: 0.5, y: 0.5 }}>
+    return (
+      <Marker coordinate={coord} anchor={{ x: 0.5, y: 0.5 }} icon={Platform.OS === 'android' ? icon : undefined}>
+        {Platform.OS === 'ios' && (
           <Image source={icon} style={{ width: 48, height: 48, resizeMode: 'contain' }} />
-        </Marker>
-      );
-    }
+        )}
+      </Marker>
+    );
   };
 
   const renderPlaceMarker = (place: any, index: number) => {
@@ -154,9 +151,9 @@ const HomeScreen = () => {
     const lng = place.geometry?.location?.lng;
     if (!lat || !lng) return null;
 
-    const name = place.name?.toLowerCase() || '';
-    const isRepair = name.includes('tamir') || name.includes('servis');
-    const isTow = name.includes('çekici');
+    const name = normalizeText(place.name || '');
+    const isRepair = name.includes('tamir');
+    const isTow = name.includes('cekici');
 
     let icon = require('../assets/icons/shop.png');
     if (isRepair) icon = require('../assets/icons/wrench.png');
@@ -186,68 +183,68 @@ const HomeScreen = () => {
           showsUserLocation={false}
           mapType={mapType}
           provider={Platform.OS === 'android' ? PROVIDER_GOOGLE : undefined}
-          followsUserLocation={true}
-          initialRegion={{
-            latitude: 41.005082,
-            longitude: 29.149471,
-            latitudeDelta: 0.01,
-            longitudeDelta: 0.01,
-          }}
+          followsUserLocation
+          initialRegion={region}
         >
           {renderCustomMarker()}
           {places.map(renderPlaceMarker)}
         </MapView>
       )}
 
-      {/* UI Buttonlar */}
-      <TouchableOpacity style={styles.mapTypeToggle} onPress={() => setMapTypeMenuVisible(prev => !prev)}>
-        <Ionicons name="layers-outline" size={22} color="#fff" />
+      <TouchableOpacity
+        style={styles.floatingFilterButton}
+        onPress={() => setFilterVisible(!filterVisible)}
+      >
+        <Ionicons name="filter" size={22} color="#fff" />
       </TouchableOpacity>
 
-      {mapTypeMenuVisible && (
-        <View style={styles.mapTypeDropdown}>
-          {['standard', 'satellite', 'hybrid'].map(type => (
-            <TouchableOpacity
-              key={type}
-              onPress={() => {
-                setMapType(type as MapType);
-                setMapTypeMenuVisible(false);
-              }}
-              style={styles.mapTypeButton}
-            >
-              <Text style={styles.mapTypeText}>{type}</Text>
-            </TouchableOpacity>
-          ))}
+      {filterVisible && (
+        <View style={styles.filterContainer}>
+          <Text style={styles.filterTitle}>Ne arıyorsun?</Text>
+          {[
+            { key: 'tamirci', label: 'Motosiklet Tamircileri', icon: 'construct-outline' },
+            { key: 'parçacı', label: 'Yedek Parça Satıcıları', icon: 'cog-outline' },
+            { key: 'çekici', label: 'Yol Yardım Hizmeti', icon: 'car-sport-outline' },
+            { key: 'honda', label: 'Honda Yetkili Servisleri', icon: 'build-outline' },
+            { key: 'yamaha', label: 'Yamaha Yetkili Servisleri', icon: 'build-outline' },
+          ].map(item => {
+            const isSelected = selectedCategory === item.key;
+            return (
+              <TouchableOpacity
+                key={item.key}
+                style={styles.filterItem}
+                onPress={() => setSelectedCategory(item.key)}
+              >
+                <View style={styles.filterLeft}>
+                  <Ionicons name={item.icon} size={20} color="#ff8200" style={{ marginRight: 8 }} />
+                  <Text style={[styles.filterText, isSelected && styles.selectedText]}>
+                    {item.label}
+                  </Text>
+                </View>
+                {isSelected && (
+                  <Ionicons name="checkmark-circle" size={20} color="#ff8200" />
+                )}
+              </TouchableOpacity>
+            );
+          })}
         </View>
       )}
 
-      <TouchableOpacity style={styles.googleLocateButton} onPress={getCurrentLocation}>
-        <Ionicons name="location-sharp" size={20} color="#007aff" />
-      </TouchableOpacity>
-
-      <View style={styles.buttonGroup}>
+      <View style={styles.fixedApplyButtonWrapper}>
         <TouchableOpacity
-          style={[styles.actionButton, selectedCategory === 'tamirci' && { backgroundColor: '#4CAF50' }]}
-          onPress={() => searchNearby('motosiklet tamircisi', 'tamirci')}
+          style={styles.applyFilterButton}
+          onPress={() => {
+            if (selectedCategory === 'tamirci')
+              searchNearby('motosiklet tamircisi', 'tamirci');
+            else if (selectedCategory === 'parçacı')
+              searchNearby('motosiklet yedek parça', 'parçacı');
+            else if (selectedCategory === 'çekici')
+              searchNearby('çekici hizmeti', 'çekici');
+            else
+              console.log('JSON tabanlı servis gösterimi yapılacak:', selectedCategory);
+          }}
         >
-          <Ionicons name="construct-outline" size={18} color="#fff" style={styles.icon} />
-          <Text style={styles.buttonLabel}>Tamircileri Göster</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={[styles.actionButton, { backgroundColor: '#ffa600' }, selectedCategory === 'parçacı' && { backgroundColor: '#4CAF50' }]}
-          onPress={() => searchNearby('motosiklet yedek parça', 'parçacı')}
-        >
-          <Ionicons name="cog-outline" size={18} color="#fff" style={styles.icon} />
-          <Text style={styles.buttonLabel}>Parçacıları Göster</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={[styles.actionButton, { backgroundColor: '#cc4a00' }, selectedCategory === 'çekici' && { backgroundColor: '#4CAF50' }]}
-          onPress={() => searchNearby('çekici hizmeti', 'çekici')}
-        >
-          <Ionicons name="car-outline" size={18} color="#fff" style={styles.icon} />
-          <Text style={styles.buttonLabel}>Çekici Hizmeti</Text>
+          <Text style={styles.applyFilterText}>Filtreyi Uygula</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -257,89 +254,76 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   map: { flex: 1 },
-  googleLocateButton: {
+  floatingFilterButton: {
     position: 'absolute',
-    bottom: 40,
-    right: 20,
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
-    elevation: 4,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 2,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    zIndex: 5,
-  },
-  buttonGroup: {
-    position: 'absolute',
-    bottom: 60,
-    alignSelf: 'center',
-    gap: 12,
-    zIndex: 4,
-  },
-  actionButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#ff8200',
-    paddingVertical: 12,
-    paddingHorizontal: 20,
-    borderRadius: 50,
-    marginVertical: 6,
-    minWidth: 240,
-    alignSelf: 'center',
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowOffset: { width: 0, height: 1 },
-  },
-  icon: {
-    marginRight: 8,
-  },
-  buttonLabel: {
-    color: '#fff',
-    fontWeight: '600',
-    fontSize: 15,
-    fontFamily: 'Montserrat-SemiBold',
-  },
-  mapTypeToggle: {
-    position: 'absolute',
-    top: 100,
+    bottom: 120,
     right: 20,
     backgroundColor: '#ff8200',
-    padding: 12,
-    borderRadius: 25,
+    padding: 14,
+    borderRadius: 30,
     zIndex: 6,
+    elevation: 4,
   },
-  mapTypeDropdown: {
+  filterContainer: {
     position: 'absolute',
-    top: 160,
+    top: 60,
+    left: 20,
     right: 20,
     backgroundColor: '#fff',
-    borderRadius: 10,
-    padding: 8,
+    borderRadius: 12,
+    padding: 16,
+    zIndex: 10,
     elevation: 5,
     shadowColor: '#000',
-    shadowOpacity: 0.15,
+    shadowOpacity: 0.1,
     shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 4,
-    zIndex: 5,
   },
-  mapTypeButton: {
-    paddingVertical: 8,
-    paddingHorizontal: 14,
-    borderRadius: 6,
+  filterTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    fontFamily: 'Montserrat-SemiBold',
+    marginBottom: 16,
+    color: '#ff8200',
   },
-  mapTypeText: {
-    fontSize: 14,
-    fontFamily: 'Montserrat-Medium',
-    color: '#333',
+  filterItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 6,
+    borderBottomWidth: 1,
+    borderBottomColor: '#eee',
+  },
+  filterLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  filterText: {
+    fontSize: 15,
+    fontFamily: 'Montserrat-Regular',
+    color: '#000',
+  },
+  selectedText: {
+    fontWeight: 'bold',
+    color: '#ff8200',
+  },
+  fixedApplyButtonWrapper: {
+    position: 'absolute',
+    bottom: 40,
+    left: 20,
+    right: 20,
+    zIndex: 11,
+  },
+  applyFilterButton: {
+    backgroundColor: '#ff8200',
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  applyFilterText: {
+    color: '#fff',
+    fontSize: 15,
+    fontFamily: 'Montserrat-SemiBold',
   },
 });
 

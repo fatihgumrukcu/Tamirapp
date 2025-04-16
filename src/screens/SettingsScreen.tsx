@@ -20,8 +20,9 @@ const SettingsScreen = () => {
   const modalRef = useRef<Modalize>(null);
 
   const handleRateApp = () => {
-    Linking.openURL('https://apps.apple.com/app/id000000000');
+    Linking.openURL('https://apps.apple.com/tr/app/tamirapp/id6744161686?l=tr');
   };
+  
 
   const handleContactSupport = () => {
     Linking.openURL('mailto:Tamirapp@yandex.com');

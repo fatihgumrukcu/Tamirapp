@@ -44,21 +44,27 @@ const FavoritesScreen = () => {
     }, [])
   );
 
-  const renderItem = ({ item }: { item: any }) => (
-    <TouchableOpacity
-      onPress={() => navigation.navigate('Detail', { place: item })}
-      style={[
-        styles.card,
-        {
-          backgroundColor: '#ff8200',
-          shadowColor: isDarkMode ? '#000' : '#b35c00',
-        },
-      ]}
-    >
-      <Text style={[styles.name, { color: '#fff' }]}>{item.name}</Text>
-      <Text style={[styles.address, { color: '#fff' }]}>{item.formatted_address}</Text>
-    </TouchableOpacity>
-  );
+  const renderItem = ({ item }: { item: any }) => {
+    const name = item.found_name || item.name || 'İsimsiz';
+    const address = item.formatted_address || 'Adres bilinmiyor';
+    
+    return (
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Detail', { place: item })}
+        style={[
+          styles.card,
+          {
+            backgroundColor: '#ff8200',
+            shadowColor: isDarkMode ? '#000' : '#b35c00',
+          },
+        ]}
+      >
+        <Text style={[styles.name, { color: '#fff' }]}>{name}</Text>
+        <Text style={[styles.address, { color: '#fff' }]}>{address}</Text>
+      </TouchableOpacity>
+    );
+  };
+  
 
   return (
     <SafeAreaView
